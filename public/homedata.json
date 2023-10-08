@@ -1,0 +1,44 @@
+[
+    {
+        "model" : "Lenovo IdeaPad Slim 3i",
+        "brand" : "",
+        "img" : "https://i.ibb.co/X3W8nwH/p101.png",
+        "price" : 53500 ,
+        "processor" : "Intel Core i3-1115G4 (6MB cache, 3.0 GHz upto 4.1 GHz)"
+    },
+    {
+       "model" : "Lenovo IdeaPad 1 15AMN7",
+       "brand" : "Lenovo",
+       "img" : "https://i.ibb.co/f2YKGPV/p102-removebg-preview.png", 
+       "price" : 60000,
+       "processor" : "AMD Ryzen 5 7520U (2.8 GHz up to 4.3 GHz)"
+    },
+    {
+       "model" : "Lenovo LOQ 15APH8",
+       "brand" : "Lenovo",
+       "img" : "https://i.ibb.co/XWcxf78/p103-prev-ui.png", 
+       "price" : 150000,
+       "processor" : "Ryzen 7 7840HS (3.8GHz Up to 5.1GHz, 8 Cores, 16 Threads)"
+    },
+    {
+       "model" : "Asus P1511CMA",
+       "brand" : "Asus",
+       "img" : "https://i.ibb.co/DgGS774/p108-prev-ui.png", 
+       "price" : 37500,
+       "processor" : "Intel Celeron N4020 (4M Cache, 1.10 GHz up to 2.80 GHz)"
+    },
+    {
+       "model" : "Apple MacBook Air (2022) Apple M2 Chip",
+       "brand" : "Apple",
+       "img" : "https://i.ibb.co/8M04h18/p141-prev-ui.png", 
+       "price" : 142000,
+       "processor" : "Apple M2 chip, 8-core CPU with 4 performance cores and 4 efficiency cores"
+    },
+    {
+       "model" : "Apple MacBook Pro 14-Inch M1 Pro Chip",
+       "brand" : "Apple",
+       "img" : "https://i.ibb.co/c8QR7Wq/p142-prev-ui.png", 
+       "price" : 141000,
+       "processor" : "Apple M2 chip, 8-core CPU with 4 performance cores and 4 efficiency cores"
+    }
+]

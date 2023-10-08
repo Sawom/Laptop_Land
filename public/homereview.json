@@ -1,0 +1,27 @@
+[
+    {
+        "name": "Emily Smith",
+        "details": "I couldn't be happier with my purchase from Laptop Land! The staff was incredibly helpful, and I found the perfect laptop for my needs. Highly recommend!",
+        "rating": 4
+    },
+    {
+        "name": "John Davis",
+        "details": "Laptop Land is the real deal! I got a fantastic deal on a powerful gaming laptop. Great selection and great prices!",
+        "rating": 5
+    },
+    {
+        "name": "Sarah Johnson",
+        "details": "I had an amazing experience at Laptop Land. They went above and beyond to help me find the ideal laptop for my graphic design work. Thank you!",
+        "rating": 5
+    },
+    {
+        "name": "David Anderson",
+        "details": "Laptop Land is my go-to place for all things tech. The quality of their laptops and their customer service is second to none. Five stars!",
+        "rating": 5
+    },
+    {
+        "name": "Michael Roberts",
+        "details": "Laptop Land exceeded my expectations. The staff's knowledge and their wide range of laptops made it easy for me to find the perfect one. I'll definitely be back!",
+        "rating": 5
+    }
+]
