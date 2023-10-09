@@ -14,60 +14,60 @@ const Slides = () => {
         <div className='container mx-auto'>
             <Carousel showArrows={true} autoPlay={true} loop={true} >
                 {/* 1 */}
-                <div className='flex' >
-                    <div style={{width: '50%'}}>
-                       <p className='text-xl mt-10'>
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1' >
+                    <div >
+                       <p className='text-xl mt-10 text-left px-5'>
                         Laptop Land: Your One-Stop Destination for Cutting-Edge Laptops!
                         </p> 
                     </div>
-                    <div style={{width: '50%'}}>
+                    <div >
                         <img alt='pic1' src={pic1} className='w-full' />
                     </div>
                 </div>
                 {/* 2 */}
-                <div className='flex' >
-                    <div style={{width: '50%'}}>
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 ' >
+                    <div >
                         
                     </div>
-                    <div style={{width: '50%'}}>
+                    <div >
                         <img alt='pic2' src={pic2} className='w-full' />
                     </div>
                 </div>
                 {/* 3 */}
-                <div className='flex' >
-                    <div style={{width: '50%'}}>
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 ' >
+                    <div >
                         
                     </div>
-                    <div style={{width: '50%'}}>
-                        <img alt='pic1' src={pic3} className='w-full' />
+                    <div >
+                        <img alt='pic3' src={pic3} className='w-full' />
                     </div>
                 </div>
                 {/* 4 */}
-                <div className='flex' >
-                    <div style={{width: '50%'}}>
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 ' >
+                    <div >
                         
                     </div>
-                    <div style={{width: '50%'}}>
-                        <img alt='pic1' src={pic4} className='w-full' />
+                    <div >
+                        <img alt='pic4' src={pic4} className='w-full' />
                     </div>
                 </div>
                 {/* 5 */}
-                <div className='flex' >
-                    <div style={{width: '50%'}} >
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 ' >
+                    <div  >
                         <p>
                             
                         </p>
                     </div>
-                    <div style={{width: '50%'}}>
+                    <div >
                         <img alt='pic5' src={pic5} className='w-full' />
                     </div>
                 </div>
                 {/* 6 */}
-                <div className='flex' >
-                    <div style={{width: '50%'}}>
-                        dsgs
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 ' >
+                    <div >
+                        dsgsrurururururutrrurururrrrrrr
                     </div>
-                    <div style={{width: '50%'}}>
+                    <div >
                         <img alt='pic6' src={pic6} className='w-full' />
                     </div>
                 </div>
