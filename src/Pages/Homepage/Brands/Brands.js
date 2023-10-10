@@ -2,8 +2,8 @@ import React from 'react';
 
 const Brands = () => {
     return (
-        <div>
-            brands
+        <div className='container mx-auto'>
+            
         </div>
     );
 };
