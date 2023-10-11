@@ -55,9 +55,9 @@ const Header = () => {
                         <li className='font-bold'> <Link to='/laptops'> <span className='text-white'> Laptops </span> </Link> </li>
                         {/* submenu */}
                         <li tabIndex={0}>
-                                <details>
+                                <details className='dropdown '>
                                 <summary className='font-bold text-white active'> <span className='text-white'>Features</span> </summary>
-                                <ul className="p-2 font-bold">
+                                <ul className="p-2 font-bold menu dropdown-content z-[1]">
                                     <li> <Link to='/about' > About </Link> </li>
                                     <li> <Link to='/faq' >FAQS</Link> </li>
                                     <li> <Link to='/terms' >Terms & Condition</Link> </li>
