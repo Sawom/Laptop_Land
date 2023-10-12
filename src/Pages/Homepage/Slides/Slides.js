@@ -11,7 +11,7 @@ import './Slides.css';
 
 const Slides = () => {
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto mb-20'>
            <Carousel 
            className='backColor p-4'
             infiniteLoop showArrows={true} autoPlay={true} loop={true} >
