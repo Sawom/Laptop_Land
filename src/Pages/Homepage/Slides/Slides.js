@@ -18,10 +18,10 @@ const Slides = () => {
                 {/* 1 */}
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1' >
                     <div className='text-left p-2' >
-                       <p className='text-2xl mt-10 font-bold'>
+                       <p className='lg:text-3xl md:text-2xl text-xl mt-10 font-bold'>
                         Laptop Land: Your One-Stop Destination for Cutting-Edge Laptops!
                         </p> 
-                        <button style={{backgroundColor: '#212E52'}} className="btn mt-5 text-white btn-outline btn-active btn-xs sm:btn-sm md:btn-md lg:btn-md ">Order Now</button>
+                        <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md " >Order Now</button>
                     </div>
                     <div >
                         <img alt='pic1' src={pic1} className='w-full' />
@@ -30,10 +30,10 @@ const Slides = () => {
                 {/* 2 */}
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 ' >
                     <div className='text-left p-2' >
-                        <p className='text-2xl mt-10 font-bold' >
+                        <p className='lg:text-3xl md:text-2xl text-xl mt-10 font-bold' >
                             Discover the Future of Computing at Laptop Land. Visit Us Today!
                         </p>
-                        <button style={{backgroundColor: '#212E52'}} className="btn mt-5 text-white btn-outline btn-active btn-xs sm:btn-sm md:btn-md lg:btn-md ">Order Now</button>
+                        <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md " >Order Now</button>
                     </div>
                     <div >
                         <img alt='pic2' src={pic2} className='w-full' />
@@ -42,10 +42,10 @@ const Slides = () => {
                 {/* 3 */}
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 ' >
                     <div className='text-left p-2' >
-                        <p className='text-2xl mt-10 font-bold' >
+                        <p className='lg:text-3xl md:text-2xl text-xl mt-10 font-bold' >
                             Upgrade Your Tech Game with Laptop Land - Quality Laptops at Unbeatable Prices!
                         </p>
-                        <button style={{backgroundColor: '#212E52'}} className="btn mt-5 text-white btn-outline btn-active btn-xs sm:btn-sm md:btn-md lg:btn-md ">Order Now</button>
+                        <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md " >Order Now</button>
                     </div>
                     <div >
                         <img alt='pic3' src={pic3} className='w-full' />
@@ -54,10 +54,10 @@ const Slides = () => {
                 {/* 4 */}
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 ' >
                     <div className='text-left p-2' >
-                        <p className='text-2xl mt-10 font-bold' >
+                        <p className='lg:text-3xl md:text-2xl text-xl mt-10 font-bold' >
                             Laptop Land - Your Trusted Source for Top Brands and Exceptional Service. Visit Us Today!
                         </p>
-                        <button style={{backgroundColor: '#212E52'}} className="btn mt-5 text-white btn-outline btn-active btn-xs sm:btn-sm md:btn-md lg:btn-md ">Order Now</button>
+                        <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md " >Order Now</button>
                     </div>
                     <div >
                         <img alt='pic4' src={pic4} className='w-full' />
@@ -66,10 +66,10 @@ const Slides = () => {
                 {/* 5 */}
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 ' >
                     <div className='text-left p-2' >
-                        <p className='text-2xl mt-10 font-bold' >
+                        <p className='lg:text-3xl md:text-2xl text-xl mt-10 font-bold' >
                             Experience the Laptop Land Difference - Quality, Value, and Expertise Combined!
                         </p>
-                        <button style={{backgroundColor: '#212E52'}} className="btn mt-5 text-white btn-outline btn-active btn-xs sm:btn-sm md:btn-md lg:btn-md ">Order Now</button>
+                        <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md " >Order Now</button>
                     </div>
                     <div >
                         <img alt='pic5' src={pic5} className='w-full' />
@@ -78,10 +78,10 @@ const Slides = () => {
                 {/* 6 */}
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 ' >
                     <div className='text-left p-2' >
-                        <p className='text-2xl mt-10 font-bold' >
+                        <p className='lg:text-3xl md:text-2xl text-xl mt-10 font-bold' >
                             Your Laptop Dreams Come True at Laptop Land - Visit Us Today!
                         </p>
-                        <button style={{backgroundColor: '#212E52'}} className="btn mt-5 text-white btn-outline btn-active btn-xs sm:btn-sm md:btn-md lg:btn-md ">Order Now</button>
+                        <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md " >Order Now</button>
                     </div>
                     <div >
                         <img alt='pic6' src={pic6} className='w-full' />

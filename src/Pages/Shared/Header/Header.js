@@ -12,7 +12,7 @@ const Header = () => {
                     {/* nav start */}
                     <div className="flex navbar-start">
                         <img style={{width: '60px'}} src={Logo} alt="" />
-                        <p className="font-bold normal-case text-3xl">Laptop Land</p>
+                        <p className="font-bold normal-case lg:text-3xl md:text-3xl text-xl">Laptop Land</p>
                     </div>
                 </div>
             </div>
