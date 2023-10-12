@@ -1,9 +1,12 @@
 import React from 'react';
+import TopBanner from '../TopBanner/TopBanner';
+import LoadLaptop from '../LoadLaptop/LoadLaptop';
 
 const Laptops = () => {
     return (
         <div>
-           laptops 
+           <TopBanner></TopBanner>
+           <LoadLaptop></LoadLaptop>
         </div>
     );
 };

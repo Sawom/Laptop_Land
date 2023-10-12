@@ -19,7 +19,7 @@ const Products = () => {
             <h1 className='text-center lg:text-4xl md:text-3xl text-xl my-10 font-bold' >
                 <span className=' py-4 border-y-4 uppercase' >new arrival </span> 
             </h1>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-8 my-10'>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-6 my-10'>
                 {
                     homedata.map( (laptopInfo) => <CardProducts
                          key={laptopInfo._id} laptopInfo={laptopInfo}

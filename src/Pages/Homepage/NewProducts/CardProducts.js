@@ -8,9 +8,9 @@ const CardProducts = ( {laptopInfo} ) => {
             <figure><img className='w-full' src={img} alt="laptops" /></figure>
             <div className="card-body text-left ">
                 <h2 className="card-title font-bold" style={{color: '#212E52'}} > {model} </h2>
-                <p className=''> Brand: {brand} </p>
-                <p className=''> Processor: {processor} </p>
-                <p>Price: {price} BDT </p>
+                <p> Brand: {brand} </p>
+                <p> Processor: {processor} </p>
+                <p style={{color: '#212E52'}} className='font-bold'>Price: {price} BDT </p>
             </div>
         </div>
     );

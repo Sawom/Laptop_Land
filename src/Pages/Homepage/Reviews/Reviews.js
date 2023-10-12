@@ -20,7 +20,11 @@ const Reviews = () => {
     }, [] )
 
     return (
-        <div className='mt-10 mb-10 mx-auto container' >
+        <div className='mt-20 mx-auto container' >
+            <h1 className='text-center lg:text-4xl md:text-3xl text-xl font-bold' >
+                <span className=' py-4 border-y-4 uppercase' >Our Customer reviews </span> 
+            </h1>
+            
             <Swiper spaceBetween={30}
         centeredSlides={true}
         autoplay={{
