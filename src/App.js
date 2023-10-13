@@ -11,6 +11,7 @@ import {
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query';
+import LaptopDetails from './Pages/LaptopPage/LaptopDetails/LaptopDetails';
 const queryClient = new QueryClient();
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
             <Route path='/faq' element={ <FAQSPage></FAQSPage> } ></Route>
             <Route path='/terms' element={ <TermsPages></TermsPages> } ></Route>
             <Route path='/laptops' element={ <Laptops></Laptops> } ></Route>
+            <Route path='laptopinfo/:id' element={ <LaptopDetails></LaptopDetails> } ></Route>
           </Routes>
           <Footer></Footer>
         </BrowserRouter>

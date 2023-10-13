@@ -1,17 +1,60 @@
-import React from 'react';
-import useLaptops from '../../../Hooks/useLaptops';
+import React, { useEffect, useState } from 'react';
 import CardLaptop from '../CardLaptop/CardLaptop';
 
+
 const LoadLaptop = () => {
-     const [laptop, loading , refetch] = useLaptops();
+    const [laptop, setLaptop] = useState([]);
+    
+    useEffect( ()=>{
+        fetch('http://localhost:5000/laptop')
+        .then( res => res.json() )
+        .then(data =>{
+            setLaptop(data);
+            } )
+    }, [] )
+
+    // searching
+    useEffect( ()=>{
+        getLaptop();
+    }, [] )
+
+    const getLaptop = async () =>{
+        let result = await fetch('http://localhost:5000/laptop');
+        result = await result.json();
+        setLaptop(result);
+    }
+
+    const handleSearch = async (event) =>{
+        let key = event.target.value;
+        if(key){
+            let result = await fetch(`http://localhost:5000/search/${key}`);
+            result = await result.json();
+            if (result){
+                setLaptop(result);
+            }
+        }
+        else{
+            getLaptop();
+        }
+
+    }
+
 
     return (
         <div  className='container mx-auto'>
+            {/* search */}
+            <div className='text-center mt-10' >
+               <input type="text" placeholder="Search Here" onChange={handleSearch} className="input input-bordered border-2 w-full text-center  " />
+            </div>
+            <br />
+           
             <div className='grid lg:grid-cols-4 md:grid-cols-3 gap-5 my-10'>
                 {
+                    laptop.length > 0 ?
                     laptop.map((laptopdata)=> <CardLaptop
                         laptopdata={laptopdata} key={laptopdata._id}
                     ></CardLaptop>  )
+                    : <h1> No result has found! </h1>
                 }
             </div>
         </div>
