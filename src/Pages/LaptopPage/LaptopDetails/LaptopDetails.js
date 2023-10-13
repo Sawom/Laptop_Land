@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const LaptopDetails = () => {
     const {id} = useParams();
@@ -10,6 +10,14 @@ const LaptopDetails = () => {
         .then(data => data.json() )
         .then(data => setDetails(data) )
     }, [] )
+
+    // booking url
+    let navigate = useNavigate();
+    // dynamic route url
+    const url = `/booking/${details._id}` ;
+    const handleBook = ()=>{
+        navigate(url);
+    }
 
     return (
         <div className='container mx-auto'>
@@ -25,7 +33,7 @@ const LaptopDetails = () => {
                 <p> <span className='font-bold'>Ram:</span>  {details.ram} </p>
                 <p> <span className='font-bold'>Ram Type:</span> {details.ramtype} </p>
                 <p style={{color: '#212E52'}} className='font-bold'>Price: {details.price} BDT </p>
-                <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">Book now</button>
+                <button onClick={handleBook} style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">Book now</button>
             </div>
         </div>
         {/* 2 */}

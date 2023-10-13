@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import CardLaptop from '../CardLaptop/CardLaptop';
+import BookingPage from '../../BookingPage/BookingPage';
 
 
 const LoadLaptop = () => {

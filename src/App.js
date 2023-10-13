@@ -12,6 +12,7 @@ import {
   QueryClientProvider,
 } from '@tanstack/react-query';
 import LaptopDetails from './Pages/LaptopPage/LaptopDetails/LaptopDetails';
+import BookingPage from './Pages/BookingPage/BookingPage';
 const queryClient = new QueryClient();
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
             <Route path='/terms' element={ <TermsPages></TermsPages> } ></Route>
             <Route path='/laptops' element={ <Laptops></Laptops> } ></Route>
             <Route path='laptopinfo/:id' element={ <LaptopDetails></LaptopDetails> } ></Route>
+            <Route path='booking/:id' element={ <BookingPage></BookingPage> } ></Route>
           </Routes>
           <Footer></Footer>
         </BrowserRouter>
