@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import useAuth from '../useAuth/useAuth';
 import { getAuth, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import login from '../../../images/others/login.png';
 
@@ -14,10 +14,8 @@ const Login = () => {
     const auth = getAuth();
 
     const navigate = useNavigate();
-    // navigate
-    if(user?.email){
-        navigate('/laptops');
-    }
+    const location = useLocation()
+    const from = location.state?.from?.pathname || "/"
 
     // email
     const handleEmail = event => {
@@ -36,6 +34,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 setError('');
+                navigate(from, {replace: true})
             })
             .catch((error) => {
                setError(error.message);
