@@ -44,7 +44,7 @@ const Header = () => {
                         {/* user wise will be changed */}
                         <li className='font-bold'><Link  > Dashboard </Link></li>
                         <li>  <button className='font-bold'>Logout</button>  </li>
-                        <li> <Link className='font-bold' > Login</Link> </li>
+                        <li> <Link to='/login' className='font-bold' > Login</Link> </li>
                     </ul>
                     </div>
                 </div>
@@ -66,13 +66,14 @@ const Header = () => {
                         </li>
                     </ul>
                 </div>
+
                 {/* nav end */}
-                
+                {/* user wise will be changed */}
                 <div className='lg:navbar-end hidden lg:flex' >
                         <ul className="menu menu-horizontal  px-1">
-                            <li className='mx-2'><Link className="btn btn-sm btn-ghost mx-2" > <span className='text-white'>Dashboard</span> </Link></li>
+                            <li className='mx-2'><Link  className="btn btn-sm btn-ghost mx-2" > <span className='text-white'>Dashboard</span> </Link></li>
                             <li> <button className="btn btn-sm btn-ghost mx-2 "> <span className='text-white'>Logout</span> </button> </li>
-                            <li> <Link className="btn btn-sm btn-ghost mx-2"> <span className='text-white'>Login</span> </Link> </li>
+                            <li> <Link to='/login' className="btn btn-sm btn-ghost mx-2"> <span className='text-white'>Login</span> </Link> </li>
                         </ul>
                 </div>
                 

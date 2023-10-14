@@ -14,6 +14,8 @@ import {
 import LaptopDetails from './Pages/LaptopPage/LaptopDetails/LaptopDetails';
 import BookingPage from './Pages/BookingPage/BookingPage';
 import AuthProvider from './Pages/Authentication/AuthProvider/AuthProvider';
+import Register from './Pages/Authentication/Register/Register';
+import Login from './Pages/Authentication/Login/Login';
 const queryClient = new QueryClient();
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
                 <Route path='/laptops' element={ <Laptops></Laptops> } ></Route>
                 <Route path='laptopinfo/:id' element={ <LaptopDetails></LaptopDetails> } ></Route>
                 <Route path='booking/:id' element={ <BookingPage></BookingPage> } ></Route>
+                <Route path='/register' element={ <Register></Register> } ></Route>
+                <Route path='/login' element={ <Login></Login> } ></Route>
               </Routes>
             <Footer></Footer>
           </BrowserRouter>
