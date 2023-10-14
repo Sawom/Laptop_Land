@@ -5,6 +5,7 @@ const TermsPages = () => {
     return (
         <div>
             <TermBanner></TermBanner>
+            
         </div>
     );
 };
