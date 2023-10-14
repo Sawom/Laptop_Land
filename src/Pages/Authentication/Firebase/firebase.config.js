@@ -1,10 +1,11 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyAGyyits2fsmj67BybrGpD8Bq5juFR0Fxk",
-  authDomain: "arsfood-7c687.firebaseapp.com",
-  projectId: "arsfood-7c687",
-  storageBucket: "arsfood-7c687.appspot.com",
-  messagingSenderId: "439836064545",
-  appId: "1:439836064545:web:eab1a933c717393fec9c60"
+  apiKey: "AIzaSyD7fVStwLzXjVIJYhwD7CtTiFu3HV1zbVs",
+  authDomain: "laptopland-f8ed5.firebaseapp.com",
+  projectId: "laptopland-f8ed5",
+  storageBucket: "laptopland-f8ed5.appspot.com",
+  messagingSenderId: "519762042617",
+  appId: "1:519762042617:web:61b1dd55c5abd64956cc28",
+  measurementId: "G-2VKTY88JYP"
 };
 
 export default firebaseConfig;
