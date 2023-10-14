@@ -37,9 +37,7 @@ const LoadLaptop = () => {
         else{
             getLaptop();
         }
-
     }
-
 
     return (
         <div  className='container mx-auto'>
