@@ -136,7 +136,7 @@ const Register = () => {
                             <input type="password" onBlur={handleConfirmpass} name="password2" placeholder="retype password" className="input input-bordered" required />
                             </div>
                             <div className="form-control mt-6">
-                                <button style={{backgroundColor: '#D1A054', color:'white'}} className="btn">Register</button>
+                                <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md">Register</button>
                             </div>
                             <p>Already registered? <Link to='/login'> <span className='font-bold text-primary' >Go to LogIn</span>  </Link> </p>
                             <br />

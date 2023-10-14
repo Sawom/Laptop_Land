@@ -16,6 +16,7 @@ import BookingPage from './Pages/BookingPage/BookingPage';
 import AuthProvider from './Pages/Authentication/AuthProvider/AuthProvider';
 import Register from './Pages/Authentication/Register/Register';
 import Login from './Pages/Authentication/Login/Login';
+import PrivateRoute from './Pages/Authentication/PrivateRoute/PrivateRoute';
 const queryClient = new QueryClient();
 
 function App() {
@@ -33,7 +34,12 @@ function App() {
                 <Route path='/terms' element={ <TermsPages></TermsPages> } ></Route>
                 <Route path='/laptops' element={ <Laptops></Laptops> } ></Route>
                 <Route path='laptopinfo/:id' element={ <LaptopDetails></LaptopDetails> } ></Route>
-                <Route path='booking/:id' element={ <BookingPage></BookingPage> } ></Route>
+                {/* private route */}
+                <Route path='booking/:id' element={ 
+                  <PrivateRoute>
+                    <BookingPage></BookingPage>
+                  </PrivateRoute>
+                 } ></Route>
                 <Route path='/register' element={ <Register></Register> } ></Route>
                 <Route path='/login' element={ <Login></Login> } ></Route>
               </Routes>

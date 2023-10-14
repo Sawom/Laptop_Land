@@ -54,11 +54,11 @@ const Header = () => {
                             {
                                 user?.email  ?
                                 <ul>
-                                    <li className='mx-2'><Link  className="btn btn-sm btn-ghost mx-2" > <span className='text-white'>Dashboard</span> </Link></li>
+                                    <li><Link> <span className='font-bold'>Dashboard</span> </Link></li>
                                     <li>  <button onClick={logoutFunction}  className='font-bold'>Logout</button>  </li>
                                 </ul> 
                                 :
-                                <li> <Link to='/login' className="btn btn-sm btn-ghost mx-2"> <span className='text-white'>Login</span> </Link> </li>
+                                <li> <Link to='/login' className=" mx-2"> <span className='font-bold' >Login</span> </Link> </li>
                             }
                     </ul>
                     </div>
@@ -88,7 +88,7 @@ const Header = () => {
                         <ul className="menu menu-horizontal  px-1">
                             {
                                 user?.email  ?
-                                <div>
+                                <div className='flex'>
                                     <li className='mx-2'><Link  className="btn btn-sm btn-ghost mx-2" > <span className='text-white'>Dashboard</span> </Link></li>
                                     <li> <button onClick={logoutFunction} className="btn btn-sm btn-ghost mx-2 "> <span className='text-white'>Logout</span> </button> </li>
                                 </div> 

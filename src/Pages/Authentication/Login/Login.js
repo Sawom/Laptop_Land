@@ -114,14 +114,14 @@ const Login = () => {
                             <input  type="password" onBlur={handlePassword}  name="password" placeholder="password" className="input input-bordered" required />
                             </div>
                             <div className="form-control mt-6">
-                                <button style={{backgroundColor: '#D1A054', color:'white'}} className="btn">Login</button>
+                                <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">Login</button>
                             </div>
                             {/* error */}
                             <p className='text-red-600' > {error} </p>
                             <p>New here? <Link to='/register'> <span className='font-bold text-primary' >Create a New Account</span>  </Link> </p>
-                            <p className='mx-auto' >Or sign in with</p>
+                            <p className='mx-auto' >Or Sign In </p>
                            {/* google login button */}
-                           <button onClick={handleGoogleSignIn} style={{backgroundColor: '#D1A054', color:'white'}} className="btn">Sign in With Google</button>
+                           <button onClick={handleGoogleSignIn} style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">Sign in With Google</button>
                            {/* reset password */}
                             <p >Forgot password? <button onClick={resetPassword} className='btn btn-link font-bold text-primary ' style={{textDecoration: 'none'}} > Reset Password </button>  </p>
                         </form>
