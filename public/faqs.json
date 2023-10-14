@@ -1,0 +1,22 @@
+[
+    {
+        "qt1" : "What types of laptops do you offer?",
+        "ans1" : "We offer a wide range of laptops, including ultrabooks, gaming laptops, business laptops, 2-in-1 convertibles, and more. Our goal is to cater to the diverse needs of our customers.",
+        "qtn2" : "How do I choose the right laptop for my needs?",
+        "ans2" : "We understand that selecting the perfect laptop can be overwhelming. Our 'Laptop Buying Guide' can help you make an informed decision, and our expert team is available to provide personalized recommendations.",
+        "qtn3" : "Are your laptops brand new or refurbished?",
+        "ans3" : "All laptops we sell are brand new unless otherwise specified. We do not sell refurbished or used laptops.",
+        "qtn4" : "What brands do you carry?",
+        "ans4" : "We carry laptops from top brands, including but not limited to Dell, HP, Lenovo, ASUS, Acer, MSI, and more.",
+        "qtn5" : "Can I return or exchange a laptop if I'm not satisfied with my purchase?",
+        "ans5" : "Yes, we have a hassle-free return and exchange policy. If you are not satisfied with your purchase, you can return it within [X] days (please specify the return period) for a full refund or exchange.",
+        "qtn6" : "Do you offer warranties on your laptops?",
+        "ans6" : "Yes, all laptops come with manufacturer warranties. The duration and terms of the warranty may vary depending on the brand and model. You can find warranty information on the product page.",
+        "qtn7" : "What payment methods do you accept?",
+        "ans7" : "We accept various payment methods, including credit/debit cards, PayPal, and other secure online payment options. We aim to provide convenient and secure payment solutions for our customers.",
+        "qtn8" : "How long does shipping take, and what are the shipping costs?",
+        "ans8" : "Shipping times and costs vary depending on your location and the selected shipping method. You can find detailed shipping information during the checkout process or in our shipping policy.",
+        "qtn9" : "Do you offer international shipping?",
+        "ans9" : "Yes, we offer international shipping to many countries. Shipping options and costs will be displayed during the checkout process."
+    }
+]

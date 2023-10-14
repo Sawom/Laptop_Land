@@ -1,9 +1,10 @@
 import React from 'react';
+import TermBanner from './TermBanner/TermBanner';
 
 const TermsPages = () => {
     return (
         <div>
-            terms & conditions
+            <TermBanner></TermBanner>
         </div>
     );
 };

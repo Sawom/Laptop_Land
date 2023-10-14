@@ -1,9 +1,10 @@
 import React from 'react';
+import FAQBanner from './FAQBanner/FAQBanner';
 
 const FAQSPage = () => {
     return (
         <div>
-            terms
+            <FAQBanner></FAQBanner>
         </div>
     );
 };
