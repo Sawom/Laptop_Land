@@ -13,29 +13,31 @@ import {
 } from '@tanstack/react-query';
 import LaptopDetails from './Pages/LaptopPage/LaptopDetails/LaptopDetails';
 import BookingPage from './Pages/BookingPage/BookingPage';
+import AuthProvider from './Pages/Authentication/AuthProvider/AuthProvider';
 const queryClient = new QueryClient();
 
 function App() {
   return (
     <div className="">
-      <QueryClientProvider client={queryClient} >
-        <BrowserRouter>
-          <Header></Header>
-          <Routes>
-            <Route path='/' element={ <Home></Home> } ></Route>
-            <Route path='/home' element={ <Home></Home> } ></Route>
-            <Route path='/about' element={ <About></About> } ></Route>
-            <Route path='/faq' element={ <FAQSPage></FAQSPage> } ></Route>
-            <Route path='/terms' element={ <TermsPages></TermsPages> } ></Route>
-            <Route path='/laptops' element={ <Laptops></Laptops> } ></Route>
-            <Route path='laptopinfo/:id' element={ <LaptopDetails></LaptopDetails> } ></Route>
-            <Route path='booking/:id' element={ <BookingPage></BookingPage> } ></Route>
-          </Routes>
-          <Footer></Footer>
-        </BrowserRouter>
-      </QueryClientProvider>
-      
-      
+      <AuthProvider>
+        <QueryClientProvider client={queryClient} >
+          <BrowserRouter>
+            <Header></Header>
+              <Routes>
+                <Route path='/' element={ <Home></Home> } ></Route>
+                <Route path='/home' element={ <Home></Home> } ></Route>
+                <Route path='/about' element={ <About></About> } ></Route>
+                <Route path='/faq' element={ <FAQSPage></FAQSPage> } ></Route>
+                <Route path='/terms' element={ <TermsPages></TermsPages> } ></Route>
+                <Route path='/laptops' element={ <Laptops></Laptops> } ></Route>
+                <Route path='laptopinfo/:id' element={ <LaptopDetails></LaptopDetails> } ></Route>
+                <Route path='booking/:id' element={ <BookingPage></BookingPage> } ></Route>
+              </Routes>
+            <Footer></Footer>
+          </BrowserRouter>
+        </QueryClientProvider>
+      </AuthProvider>
+       
     </div>
   );
 }
