@@ -1,7 +1,9 @@
 import React from 'react';
+import useAuth from '../../Authentication/useAuth/useAuth';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
+    const {user} = useAuth();
 
     return (
      <div className='mt-8' >
@@ -26,9 +28,9 @@ const Footer = () => {
                         {/* user info */}
                         <br />
                         <div>
-                            <span className='text-white' > User:  </span>
+                            <span className='text-white' > User: {user?.displayName && user.displayName} </span>
                             <br />
-                            <span className='text-white'>Email:  </span>
+                            <span className='text-white'>Email: {user?.email && user.email} </span>
                         </div>
                     </div>
                 </footer>

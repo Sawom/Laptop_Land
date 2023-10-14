@@ -2,8 +2,16 @@ import React from 'react';
 import Logo from '../../../images/logo.png';
 import { Link } from 'react-router-dom';
 import './Header.css';
+import useAuth from '../../Authentication/useAuth/useAuth';
 
 const Header = () => {
+    const {user, logoutUser} = useAuth();
+
+    // use firebase theke ashche
+    const logoutFunction =() =>{
+        logoutUser();
+    }
+
     return (
         <div>
             {/* 1st part */}
@@ -38,13 +46,20 @@ const Header = () => {
                                 <li> <Link to='/about' >About</Link> </li>
                                 <li> <Link to='/faq' >FAQS</Link> </li>
                                 <li> <Link to='/terms' >Terms & Condition</Link> </li>
+                                {/* <li>  <button className='font-bold'>Logout</button>  </li> */}
                             </ul>
                             </details>
                         </li>
-                        {/* user wise will be changed */}
-                        <li className='font-bold'><Link  > Dashboard </Link></li>
-                        <li>  <button className='font-bold'>Logout</button>  </li>
-                        <li> <Link to='/login' className='font-bold' > Login</Link> </li>
+                        {/* user wise will be changed logout dashboard */}
+                            {
+                                user?.email  ?
+                                <ul>
+                                    <li className='mx-2'><Link  className="btn btn-sm btn-ghost mx-2" > <span className='text-white'>Dashboard</span> </Link></li>
+                                    <li>  <button onClick={logoutFunction}  className='font-bold'>Logout</button>  </li>
+                                </ul> 
+                                :
+                                <li> <Link to='/login' className="btn btn-sm btn-ghost mx-2"> <span className='text-white'>Login</span> </Link> </li>
+                            }
                     </ul>
                     </div>
                 </div>
@@ -71,13 +86,18 @@ const Header = () => {
                 {/* user wise will be changed */}
                 <div className='lg:navbar-end hidden lg:flex' >
                         <ul className="menu menu-horizontal  px-1">
-                            <li className='mx-2'><Link  className="btn btn-sm btn-ghost mx-2" > <span className='text-white'>Dashboard</span> </Link></li>
-                            <li> <button className="btn btn-sm btn-ghost mx-2 "> <span className='text-white'>Logout</span> </button> </li>
-                            <li> <Link to='/login' className="btn btn-sm btn-ghost mx-2"> <span className='text-white'>Login</span> </Link> </li>
+                            {
+                                user?.email  ?
+                                <div>
+                                    <li className='mx-2'><Link  className="btn btn-sm btn-ghost mx-2" > <span className='text-white'>Dashboard</span> </Link></li>
+                                    <li> <button onClick={logoutFunction} className="btn btn-sm btn-ghost mx-2 "> <span className='text-white'>Logout</span> </button> </li>
+                                </div> 
+                                :
+                                <li> <Link to='/login' className="btn btn-sm btn-ghost mx-2"> <span className='text-white'>Login</span> </Link> </li>
+                            }
+                            
                         </ul>
                 </div>
-                
-                
                 
                 </div>
             </div>
