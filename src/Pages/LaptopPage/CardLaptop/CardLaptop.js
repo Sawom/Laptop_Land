@@ -13,7 +13,7 @@ const CardLaptop = ({laptopdata}) => {
 
     return (
         <div>
-            <div className="card card-compact w-full bg-base-100 shadow-2xl px-2">
+            <div className="card card-compact w-full h-full bg-base-100 shadow-2xl px-2">
             <figure><img className='w-full' src={img} alt="laptops" /></figure>
              <p className='absolute right-0 bg-black text-white mr-4 mt-4 px-4 ' > {price} BDT </p>
             <div className="card-body text-left ">

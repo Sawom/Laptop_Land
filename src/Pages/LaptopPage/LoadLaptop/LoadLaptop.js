@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import CardLaptop from '../CardLaptop/CardLaptop';
 import BookingPage from '../../BookingPage/BookingPage';
 
-
 const LoadLaptop = () => {
-    const [laptop, setLaptop] = useState([]);
+    const [laptop, setLaptop] = useState([]); // data = laptop
     
     useEffect( ()=>{
         fetch('http://localhost:5000/laptop')
@@ -53,7 +52,7 @@ const LoadLaptop = () => {
                     laptop.map((laptopdata)=> <CardLaptop
                         laptopdata={laptopdata} key={laptopdata._id}
                     ></CardLaptop>  )
-                    : <h1> No result has found! </h1>
+                    : <h1 className='text-2xl'> No result has found! </h1>
                 }
             </div>
         </div>
