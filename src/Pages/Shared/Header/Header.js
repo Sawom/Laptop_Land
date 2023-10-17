@@ -3,9 +3,12 @@ import Logo from '../../../images/logo.png';
 import { Link } from 'react-router-dom';
 import './Header.css';
 import useAuth from '../../Authentication/useAuth/useAuth';
+import useCart from '../../../Hooks/useCart';
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Header = () => {
     const {user, logoutUser} = useAuth();
+    const [cart] = useCart();
 
     // use firebase theke ashche
     const logoutFunction =() =>{
@@ -21,6 +24,14 @@ const Header = () => {
                     <div className="flex navbar-start">
                         <img style={{width: '60px'}} src={Logo} alt="" />
                         <p className="font-bold normal-case lg:text-3xl md:text-3xl text-xl">Laptop Land</p>
+                    </div>
+                    {/* end */}
+                    <div className='navbar-end'>
+                        <Link to='/laptops'>
+                            <button className='gap-2'>
+                                <div className="badge px-2 badge-neutral"> <FaShoppingCart></FaShoppingCart> +{cart?.length || 0 }</div>
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
