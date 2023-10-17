@@ -1,14 +1,67 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import useAuth from '../../Authentication/useAuth/useAuth';
+import useCart from '../../../Hooks/useCart';
+import Swal from 'sweetalert2';
 
 const CardLaptop = ({laptopdata}) => {
     const { _id, model, brand, img, price,  code } = laptopdata;
+    const {user} = useAuth();
 
     let navigate = useNavigate();
+    const location = useLocation(); 
+
+    const [,refetch] = useCart()
+
     // dynamic route url
     const url = `/laptopinfo/${_id}` ;
     const handleView = ()=>{
         navigate(url);
+    }
+
+    // add to cart
+    const handleAddToCart = (laptopdata) =>{
+        if(user && user.email){
+            const cartItem = {laptopId: _id, code , model, img, price, email: user.email};
+
+            fetch('http://localhost:5000/carts', {
+                method: 'POST', 
+                headers:{
+                     'content-type' : 'application/json'
+                },
+                 body: JSON.stringify(cartItem)
+            })
+            .then(res => res.json())
+            .then(data =>{
+                if(data.insertedId){
+                    refetch();
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'Laptop added to cart',
+                        showConfirmButton: false,
+                        timer: 1500
+                        })  
+                }
+
+
+            })
+
+        }
+        else{
+            Swal.fire({
+                title: 'Please login to add laptop in your cart',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Login now!'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  navigate('/login', {state: {from: location}})
+                }
+              })
+        } 
     }
 
     return (
@@ -20,7 +73,7 @@ const CardLaptop = ({laptopdata}) => {
                 <h2 className="card-title font-bold" style={{color: '#212E52'}} > {model} </h2>
                 <p> Product code: {code} </p>
                 <p> Brand: {brand} </p>
-                <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">add to cart</button>
+                <button onClick={ ()=> handleAddToCart(laptopdata) } style={{backgroundColor: '#212E52'}} className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">add to cart</button>
                 <button onClick={handleView}  style={{backgroundColor: '#212E52'}} className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">View details</button>
                 
             </div>
