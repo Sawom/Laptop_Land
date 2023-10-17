@@ -20,9 +20,8 @@ const CardLaptop = ({laptopdata}) => {
                 <h2 className="card-title font-bold" style={{color: '#212E52'}} > {model} </h2>
                 <p> Product code: {code} </p>
                 <p> Brand: {brand} </p>
-                <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">book now</button>
                 <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">add to cart</button>
-                <button onClick={handleView}  style={{backgroundColor: '#004600'}} className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">View details</button>
+                <button onClick={handleView}  style={{backgroundColor: '#212E52'}} className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">View details</button>
                 
             </div>
         </div>

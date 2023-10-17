@@ -42,7 +42,7 @@ const LoadLaptop = () => {
         <div  className='container mx-auto'>
             {/* search */}
             <div className='text-center mt-10' >
-               <input type="text" placeholder="Search Here" onChange={handleSearch} className="input input-bordered border-2 w-full text-center  " />
+               <input type="text" placeholder="Search by brand or model" onChange={handleSearch} className="input input-bordered border-2 w-full text-center  " />
             </div>
             <br />
            

@@ -97,7 +97,7 @@ const FAQinfo = ({faqinfo}) => {
             </div>
             {/* others */}
             <div>
-                You can contact our customer support team via email, phone, or our contact form. We're here to assist you with any questions or concerns you may have.
+                You can contact our customer support team via email or phone. We're here to assist you with any questions or concerns you may have.
             </div>
         </div>
     );
