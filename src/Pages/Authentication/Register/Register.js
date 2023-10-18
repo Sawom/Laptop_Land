@@ -69,7 +69,7 @@ const Register = () => {
             .then( (data)=>{
                 if(data.insertedId){
                     Swal.fire({
-                            title: 'Now you are registered. Congratulations! please check your email to verify your email address.',
+                            title: 'Now you are registered. Congratulations! Check your email to verify your email address.',
                             showClass: {
                                 popup: 'animate__animated animate__fadeInDown'
                             },

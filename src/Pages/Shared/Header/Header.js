@@ -5,14 +5,33 @@ import './Header.css';
 import useAuth from '../../Authentication/useAuth/useAuth';
 import useCart from '../../../Hooks/useCart';
 import { FaShoppingCart } from 'react-icons/fa';
+import Swal from 'sweetalert2';
 
 const Header = () => {
     const {user, logoutUser} = useAuth();
     const [cart] = useCart();
 
-    // use firebase theke ashche
+    // logout function
     const logoutFunction =() =>{
-        logoutUser();
+         Swal.fire({
+            title: 'Are you sure?',
+            text: "You will be signed out.",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Signed Out!'
+        }).then(result =>{
+            if (result.isConfirmed){
+                logoutUser();
+                Swal.fire(
+                        'Signed out!',
+                        'You are signed out.',
+                        'success'
+                )
+            }
+        })
+        
     }
 
     return (
@@ -46,7 +65,7 @@ const Header = () => {
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </label>
                     {/* responsive menu part */}
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[10] p-2 shadow bg-base-100 rounded-box w-52">
                         <li className='font-bold' > <Link to='/home'>Home</Link> </li>
                         <li className='font-bold' > <Link to='/laptops'>Laptops</Link> </li>
                         {/* submenu */}
@@ -57,11 +76,9 @@ const Header = () => {
                                 <li> <Link to='/about' >About</Link> </li>
                                 <li> <Link to='/faq' >FAQS</Link> </li>
                                 <li> <Link to='/terms' >Terms & Condition</Link> </li>
-                                {/* <li>  <button className='font-bold'>Logout</button>  </li> */}
                             </ul>
                             </details>
                         </li>
-                        {/* user wise will be changed logout dashboard */}
                             {
                                 user?.email  ?
                                 <ul>
@@ -69,7 +86,7 @@ const Header = () => {
                                     <li>  <button onClick={logoutFunction}  className='font-bold'>Logout</button>  </li>
                                 </ul> 
                                 :
-                                <li> <Link to='/login' className=" mx-2"> <span className='font-bold' >Login</span> </Link> </li>
+                                <li> <Link to='/login' > <span className='font-bold' >Login</span> </Link> </li>
                             }
                     </ul>
                     </div>
@@ -83,7 +100,7 @@ const Header = () => {
                         <li tabIndex={0}>
                                 <details className='dropdown '>
                                 <summary className='font-bold text-white active'> <span className='text-white'>Features</span> </summary>
-                                <ul className="p-2 font-bold menu dropdown-content z-[1]">
+                                <ul className="p-2 font-bold menu dropdown-content z-[10]">
                                     <li> <Link to='/about' > About </Link> </li>
                                     <li> <Link to='/faq' >FAQS</Link> </li>
                                     <li> <Link to='/terms' >Terms & Condition</Link> </li>
