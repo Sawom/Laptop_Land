@@ -43,7 +43,6 @@ const Login = () => {
 
     // user login 
     const handleUserLogin = event =>{
-        // ei line must form e add kora lage.
         event.preventDefault();  
         handleLogin(email, password);
     }
@@ -53,7 +52,6 @@ const Login = () => {
         if (email) {
             await sendPasswordResetEmail(auth, email)
             .then(result =>{
-                 // sweet alert
                 Swal.fire({
                     title: 'Email sent. Check your email.',
                     showClass: {
@@ -63,6 +61,7 @@ const Login = () => {
                         popup: 'animate__animated animate__fadeOutUp'
                     }
                 })
+
             })
            .catch((error) => {
                setError(error.message);

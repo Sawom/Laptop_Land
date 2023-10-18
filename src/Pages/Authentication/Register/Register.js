@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import useAuth from '../useAuth/useAuth';
 import { Link, useNavigate } from 'react-router-dom';
 import reg from '../../../images/others/reg.png';
+import Swal from 'sweetalert2';
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -56,6 +57,28 @@ const Register = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            const saveUser = {name:name, email:email}
+            fetch('http://localhost:5000/users',{
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(saveUser)
+            })
+            .then(res=> res.json())
+            .then( (data)=>{
+                if(data.insertedId){
+                    Swal.fire({
+                            title: 'Now you are registered. Congratulations! please check your email to verify your email address.',
+                            showClass: {
+                                popup: 'animate__animated animate__fadeInDown'
+                            },
+                            hideClass: {
+                                popup: 'animate__animated animate__fadeOutUp'
+                            }
+                    })
+                }
+            } )
             setError('');
             verifyEmail();
             setUserName();
@@ -78,7 +101,7 @@ const Register = () => {
     }
 
     // create a register user
-    const handleRegistration = event =>{
+    const handleRegistration = (event) =>{
         event.preventDefault(); 
          if(password !== confirmpass){
             setError("Your password did not match! ");
