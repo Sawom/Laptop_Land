@@ -83,6 +83,7 @@ const Login = () => {
     // google login 
     const handleGoogleSignIn = () => {
         signInWithGoogle();
+        navigate(from, {replace: true});
     }
 
     return (
