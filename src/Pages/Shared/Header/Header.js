@@ -6,9 +6,11 @@ import useAuth from '../../Authentication/useAuth/useAuth';
 import useCart from '../../../Hooks/useCart';
 import { FaShoppingCart } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import useAdmin from '../../../Hooks/useAdmin';
 
 const Header = () => {
     const {user, logoutUser} = useAuth();
+     const [isAdmin] = useAdmin();
     const [cart] = useCart();
 
     // logout function
@@ -82,7 +84,13 @@ const Header = () => {
                             {
                                 user?.email  ?
                                 <ul>
-                                    <li><Link> <span className='font-bold'>Dashboard</span> </Link></li>
+                                    {
+                                        isAdmin ? <li><Link to='/dashboard/adminhome' > <span className='font-bold'>Dashboard</span> </Link></li>
+                                        :
+                                        <li><Link to='/dashboard/userhome' > <span className='font-bold'>Dashboard</span> </Link></li>
+                                    }
+                                    
+
                                     <li>  <button onClick={logoutFunction}  className='font-bold'>Logout</button>  </li>
                                 </ul> 
                                 :
@@ -117,7 +125,11 @@ const Header = () => {
                             {
                                 user?.email  ?
                                 <div className='flex'>
-                                    <li className='mx-2'><Link  className="btn btn-sm btn-ghost mx-2" > <span className='text-white'>Dashboard</span> </Link></li>
+                                    {
+                                        isAdmin ? <li className='mx-2'><Link to='/dashboard/adminhome' className="btn btn-sm btn-ghost mx-2" > <span className='text-white'>Dashboard</span> </Link></li>
+                                        :
+                                        <li className='mx-2'><Link to='/dashboard/userhome' className="btn btn-sm btn-ghost mx-2" > <span className='text-white'>Dashboard</span> </Link></li>
+                                    }
                                     <li> <button onClick={logoutFunction} className="btn btn-sm btn-ghost mx-2 "> <span className='text-white'>Logout</span> </button> </li>
                                 </div> 
                                 :

@@ -17,6 +17,16 @@ import AuthProvider from './Pages/Authentication/AuthProvider/AuthProvider';
 import Register from './Pages/Authentication/Register/Register';
 import Login from './Pages/Authentication/Login/Login';
 import PrivateRoute from './Pages/Authentication/PrivateRoute/PrivateRoute';
+import DashboardPage from './Pages/Dashboard/DashboardPage/DashboardPage';
+import UserHome from './Pages/Dashboard/UserHome/UserHome';
+import AdminHome from './Pages/Dashboard/AdminHome/AdminHome';
+import AddProducts from './Pages/Dashboard/AddProducts/AddProducts';
+import AddReviews from './Pages/Dashboard/AddReviews/AddReviews';
+import ManageAllProducts from './Pages/Dashboard/ManageAllProducts/ManageAllProducts';
+import ManageOrders from './Pages/Dashboard/ManageOrders/ManageOrders';
+import ManageUsers from './Pages/Dashboard/ManageUsers/ManageUsers';
+import Payment from './Pages/Dashboard/Payment/Payment';
+import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 const queryClient = new QueryClient();
 
 function App() {
@@ -34,12 +44,31 @@ function App() {
                 <Route path='/terms' element={ <TermsPages></TermsPages> } ></Route>
                 <Route path='/laptops' element={ <Laptops></Laptops> } ></Route>
                 <Route path='laptopinfo/:id' element={ <LaptopDetails></LaptopDetails> } ></Route>
-                {/* private route */}
+                {/* private route: BookingPage */}
                 <Route path='booking/:id' element={ 
                   <PrivateRoute>
                     <BookingPage></BookingPage>
                   </PrivateRoute>
-                 } ></Route>
+                } ></Route>
+
+                {/* private route & nested route: DashboardPage */}
+                <Route path='/dashboard' element={
+                  <PrivateRoute>
+                      <DashboardPage></DashboardPage>
+                  </PrivateRoute>
+                }>
+                  <Route path='userhome' element={ <UserHome></UserHome> } ></Route>
+                  <Route path='adminhome' element={ <AdminHome></AdminHome> } ></Route>
+                  <Route path='addproduct' element={ <AddProducts></AddProducts> } ></Route>
+                  <Route path='addreviews' element={ <AddReviews></AddReviews> } ></Route>
+                  <Route path='manageproduct' element={ <ManageAllProducts></ManageAllProducts> } ></Route>
+                  <Route path='manageorder' element={ <ManageOrders></ManageOrders> } ></Route>
+                  <Route path='manageuser' element={ <ManageUsers></ManageUsers> } ></Route>
+                  <Route path='myorder' element={ <MyOrders></MyOrders> } ></Route>
+                  <Route path='payment' element={ <Payment></Payment> } ></Route>
+                </Route>
+                {/* end dashboard page route */}
+
                 <Route path='/register' element={ <Register></Register> } ></Route>
                 <Route path='/login' element={ <Login></Login> } ></Route>
               </Routes>
