@@ -58,14 +58,16 @@ function App() {
                   </PrivateRoute>
                 }>
                   <Route path='userhome' element={ <UserHome></UserHome> } ></Route>
+                  <Route path='addreviews' element={ <AddReviews></AddReviews> } ></Route>
+                  <Route path='myorder' element={ <MyOrders></MyOrders> } ></Route>
+                  <Route path='payment' element={ <Payment></Payment> } ></Route>
+
                   <Route path='adminhome' element={ <AdminHome></AdminHome> } ></Route>
                   <Route path='addproduct' element={ <AddProducts></AddProducts> } ></Route>
-                  <Route path='addreviews' element={ <AddReviews></AddReviews> } ></Route>
                   <Route path='manageproduct' element={ <ManageAllProducts></ManageAllProducts> } ></Route>
                   <Route path='manageorder' element={ <ManageOrders></ManageOrders> } ></Route>
                   <Route path='manageuser' element={ <ManageUsers></ManageUsers> } ></Route>
-                  <Route path='myorder' element={ <MyOrders></MyOrders> } ></Route>
-                  <Route path='payment' element={ <Payment></Payment> } ></Route>
+                  
                 </Route>
                 {/* end dashboard page route */}
 
