@@ -5,24 +5,24 @@ import { useQuery } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
 
 const ManageUsers = () => {
-    const [axiosSecure] = useAxiosSecure();
+    // const [axiosSecure] = useAxiosSecure();
 
     // load user
     const {data: users = [], refetch } = useQuery(['users'] , async () =>{
-        const res = await axiosSecure.get('/users')
-        return res.data ;
+        const res = await fetch('http://localhost:5000/users')
+        return res.json() ;
     })
 
     // make admin
     const handleMakeAdmin = (user) =>{
-        fetch(`http://localhost:5000/users/admin/{user._id}`, {
+        fetch(`http://localhost:5000/users/admin/${user._id}`, {
             method: 'PATCH'
         })
         .then(res => res.json())
         .then( (data) =>{
             if(data.modifiedCount ){
                 refetch();
-                 Swal.fire({
+                Swal.fire({
                     position: 'top-end',
                     icon: 'success',
                     title: `${user.name} is an Admin Now!`,
@@ -92,7 +92,7 @@ const ManageUsers = () => {
                             <td> {user.email} </td>
                             {/* check admin  */}
                             <td>
-                                {/* user admin hole admin likha ta dekhabo ze beday admin. */}
+                                
                                 {
                                     user.role === 'admin' ? 'admin' : <button onClick={() => handleMakeAdmin(user)} className="btn btn-ghost bg-blue-700
                                       text-white"> <FaUserShield></FaUserShield> </button>

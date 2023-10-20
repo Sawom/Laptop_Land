@@ -9,8 +9,6 @@ const useAdmin = () => {
 
     const {data: isAdmin, isLoading: isAdminLoading} = useQuery({
         queryKey: ['isAdmin', user?.email],
-        // enabled: !loading, eta na dile axios network error ashe.
-        // 1ta din lagche eita solve korte!
         enabled: !loading,
         queryFn: async ()=>{
             const res = await axiosSecure.get(`/users/admin/${user?.email}`);
