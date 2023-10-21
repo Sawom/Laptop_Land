@@ -42,14 +42,14 @@ const MyOrders = () => {
     }
 
     return (
-        <div className='container px-1'>
+        <div className='container mx-auto px-1'>
             <h1 className='text-2xl mx-5'> <span className='text-blue-600'> {user.displayName}</span> , here is your order. Please pay to confirm order.</h1>
             <br />
             <div className='font-semibold h-[80px] flex justify-evenly items-center'>
                 <h3 className='text-xl'> Total Items: {cart.length} & </h3>
                 <h3 className='text-xl mx-1'> Total price: {total} BDT </h3>
                 <Link to="/dashboard/payment">
-                    <button className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <FaDollarSign></FaDollarSign> Pay</button>
+                    <button className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex'><FaDollarSign></FaDollarSign> Pay</span> </button>
                 </Link>
             </div>
             <br />

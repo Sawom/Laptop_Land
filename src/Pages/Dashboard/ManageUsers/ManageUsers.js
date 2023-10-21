@@ -9,7 +9,7 @@ const ManageUsers = () => {
 
     const {data: users = [], refetch } = useQuery(['users'] , async () =>{
         const res = await  axiosSecure.get('/users')
-        return res.data ;
+        return res.data;
     })
 
     // make admin

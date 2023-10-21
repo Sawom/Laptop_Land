@@ -52,11 +52,11 @@ const useFirebase = () => {
             });
     } 
 
-     // observer if user signin or not
+    // observer if user signin or not
     useEffect(()=>{
-        const unsubscribed = onAuthStateChanged(auth, (currentUser)=>{
+        const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
+                setUser(currentUser);
                 if(currentUser){
-                    setUser(currentUser);
                     axios.post('http://localhost:5000/jwt', {email: currentUser.email})
                     .then(data =>{
                         // console.log(data.data.token);
@@ -65,11 +65,12 @@ const useFirebase = () => {
                     })
 
                 } else{
-                    setUser({})
                     localStorage.removeItem('access-token')
                 }
         });
-        return () => unsubscribed;
+        return () => {
+            unsubscribe();
+        }
     }, [auth]) 
 
     // logout user 
@@ -85,6 +86,7 @@ const useFirebase = () => {
     return (
         {
             user,
+            loading,
             signInWithGoogle,
             logoutUser,
         }

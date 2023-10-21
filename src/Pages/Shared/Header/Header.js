@@ -32,8 +32,7 @@ const Header = () => {
                         'success'
                 )
             }
-        })
-        
+        }) 
     }
 
     return (
