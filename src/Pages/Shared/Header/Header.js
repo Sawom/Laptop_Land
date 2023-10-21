@@ -15,7 +15,7 @@ const Header = () => {
 
     // logout function
     const logoutFunction =() =>{
-         Swal.fire({
+        Swal.fire({
             title: 'Are you sure?',
             text: "You will be signed out.",
             icon: 'warning',

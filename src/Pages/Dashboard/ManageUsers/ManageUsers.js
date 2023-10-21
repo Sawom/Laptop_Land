@@ -5,12 +5,11 @@ import { useQuery } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
 
 const ManageUsers = () => {
-    // const [axiosSecure] = useAxiosSecure();
+    const [axiosSecure] = useAxiosSecure();
 
-    // load user
     const {data: users = [], refetch } = useQuery(['users'] , async () =>{
-        const res = await fetch('http://localhost:5000/users')
-        return res.json() ;
+        const res = await  axiosSecure.get('/users')
+        return res.data ;
     })
 
     // make admin
