@@ -14,7 +14,17 @@ const ManageUsers = () => {
 
     // make admin
     const handleMakeAdmin = (user) =>{
-        fetch(`http://localhost:5000/users/admin/${user._id}`, {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, Make Admin!'
+        }).then( (result)=>{
+            if(result.isConfirmed){
+                fetch(`http://localhost:5000/users/admin/${user._id}`, {
             method: 'PATCH'
         })
         .then(res => res.json())
@@ -29,6 +39,8 @@ const ManageUsers = () => {
                     timer: 1500
                   })
                 //   end swal
+              }
+                } )
             }
         } )
     }

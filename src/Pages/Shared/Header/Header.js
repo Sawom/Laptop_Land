@@ -11,7 +11,7 @@ import useAdmin from '../../../Hooks/useAdmin';
 const Header = () => {
     const {user, logoutUser} = useAuth();
      const [isAdmin] = useAdmin();
-    const [cart] = useCart();
+    const [cart, refetch] = useCart();
 
     // logout function
     const logoutFunction =() =>{

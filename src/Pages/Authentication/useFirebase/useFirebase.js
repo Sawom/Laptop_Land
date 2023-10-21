@@ -7,10 +7,10 @@ import axios from 'axios';
 initializeFirebase();
 
 const useFirebase = () => {
-    const [user,setUser] = useState({});
+    const [user, setUser] = useState({});
     const [ error, setError] = useState('');
     const [loading, setLoading] = useState(true);
-
+    
     const auth = getAuth();
 
      // google login
@@ -59,13 +59,13 @@ const useFirebase = () => {
                 if(currentUser){
                     axios.post('http://localhost:5000/jwt', {email: currentUser.email})
                     .then(data =>{
-                        // console.log(data.data.token);
                         localStorage.setItem('access-token', data.data.token)
                         setLoading(false);
                     })
 
                 } else{
-                    localStorage.removeItem('access-token')
+                    setUser({})
+                    localStorage.removeItem('access-token');
                 }
         });
         return () => {
@@ -76,7 +76,7 @@ const useFirebase = () => {
     // logout user 
     const logoutUser = () => {
         signOut(auth).then(() => {
-            // Sign-out successful.
+            
         }).catch((error) => {
             const errorMessage = error.message;
             setError(error.message);
