@@ -18,7 +18,7 @@ const DashboardPage = () => {
                     <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden  md:hidden hidden">Open drawer</label>
                     <Outlet></Outlet>
                 </div> 
-                <div className="drawer-side bg-[#008080]">
+                <div className="drawer-side bg-[#008080] h-full">
                     <label htmlFor="my-drawer-2" aria-label="close sidebar" className="drawer-overlay"></label> 
                     <ul className="menu p-2 w-auto min-h-full mt-5 text-base-content">
                     {/* Sidebar content here */}
@@ -43,18 +43,10 @@ const DashboardPage = () => {
                             </>
                         }
                         
-                        
-                        
-                        
-                        
-                        
-                                          
-    
                         {/* divider */}
                         <div className='divider' ></div>
                         <li className='font-bold'> <Link to='/'> <span className='text-white flex gap-1' > <FaHome></FaHome> Home </span> </Link> </li>
                         <li className='font-bold'> <Link to='/laptops'> <span className='text-white flex gap-1' > Our Collections </span> </Link> </li>
-
                     </ul>
                 
                 </div>
