@@ -28,6 +28,7 @@ import ManageUsers from './Pages/Dashboard/ManageUsers/ManageUsers';
 import Payment from './Pages/Dashboard/Payment/Payment';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import AdminRoute from './Pages/Dashboard/AdminRoute/AdminRoute';
+import UpdateProduct from './Pages/Dashboard/UpdateProduct/UpdateProduct';
 const queryClient = new QueryClient();
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
                 <Route path='/terms' element={ <TermsPages></TermsPages> } ></Route>
                 <Route path='/laptops' element={ <Laptops></Laptops> } ></Route>
                 <Route path='laptopinfo/:id' element={ <LaptopDetails></LaptopDetails> } ></Route>
+                
                 {/* private route: BookingPage */}
                 <Route path='booking/:id' element={ 
                   <PrivateRoute>
@@ -75,6 +77,14 @@ function App() {
                     </AdminRoute>
                      } ></Route>
                   <Route path='manageproduct' element={ <ManageAllProducts></ManageAllProducts> } ></Route>
+                  
+                  {/* admin route: update product */}
+                  <Route path='manageproduct/update/:id' element={
+                    <AdminRoute>
+                      <UpdateProduct></UpdateProduct>
+                    </AdminRoute>
+                  } ></Route>
+
                   <Route path='manageorder' element={ <ManageOrders></ManageOrders> } ></Route>
                   <Route path='manageuser' element={ <ManageUsers></ManageUsers> } ></Route>
                   
