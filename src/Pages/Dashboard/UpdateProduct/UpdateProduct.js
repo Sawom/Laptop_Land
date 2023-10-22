@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import {RxUpdate} from 'react-icons/rx';
 
 const UpdateProduct = () => {
     const [update, setUpdate] = useState({});
@@ -302,21 +303,157 @@ const UpdateProduct = () => {
                     {/* 1. code */}
                     <div className="form-control w-full mb-2">
                         <label className="label">
-                            <span className="label-text font-semibold">Recipe name</span>
+                            <span className="label-text font-semibold">Code</span>
                         </label>
-                        <input type="text" name="name" onChange={handleCodeChange} defaultValue={update.name || ''} placeholder="Recipe name"   className="input input-bordered w-full " />
+                        <input type="text" name="code" onChange={handleCodeChange} defaultValue={update.code || ''} placeholder="Update Code"   className="input input-bordered w-full " />
                     </div>
+
                     {/* 2. model */}
                     <div className="form-control w-full mb-2">
                         <label className="label">
-                            <span className="label-text font-semibold">Recipe name</span>
+                            <span className="label-text font-semibold">Model</span>
                         </label>
-                        <input type="text" name="name" onChange={handleModelChange} defaultValue={update.name || ''} placeholder="Recipe name"   className="input input-bordered w-full " />
+                        <input type="text" name="model" onChange={handleModelChange} defaultValue={update.model || ''} placeholder="Update Model"   className="input input-bordered w-full " />
                     </div>
 
+                    {/* 3. brand */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Brand</span>
+                        </label>
+                        <input type="text" name="brand" onChange={handleBrandChange} defaultValue={update.brand || ''} placeholder="Update Brand"   className="input input-bordered w-full " />
+                    </div>
+                    
+                    {/* 4. price */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Price</span>
+                        </label>
+                        <input type="number" name="price" onChange={handlePriceChange} defaultValue={update.price || ''} placeholder="Update Price"   className="input input-bordered w-full " />
+                    </div>
 
+                    {/* 5. processor */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Processor</span>
+                        </label>
+                        <input type="text" name="processor" onChange={handleProcessorChange} defaultValue={update.processor || ''} placeholder="Update Processor"   className="input input-bordered w-full " />
+                    </div>
+                    
+                    {/* 6. ram */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Ram</span>
+                        </label>
+                        <input type="text" name="ram" onChange={handleRamChange} defaultValue={update.ram || ''} placeholder="Update Ram"   className="input input-bordered w-full " />
+                    </div>
+
+                    {/* 7. ramtype */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Ram Type</span>
+                        </label>
+                        <input type="text" name="ramtype" onChange={handleRamtypeChange} defaultValue={update.ramtype || ''} placeholder="Update Ram Type"   className="input input-bordered w-full " />
+                    </div>
+
+                    {/* 8. display */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Display</span>
+                        </label>
+                        <input type="text" name="display" onChange={handleDisplayChange} defaultValue={update.display || ''} placeholder="Update Display"   className="input input-bordered w-full " />
+                    </div>
+
+                    {/* 9. storagecapacity */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Storage Capacity</span>
+                        </label>
+                        <input type="text" name="storagecapacity" onChange={handleStoragecapacityChange} defaultValue={update.storagecapacity || ''} placeholder="Update Storage Capacity"   className="input input-bordered w-full " />
+                    </div>
+
+                    {/* 10. graphics */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Graphics</span>
+                        </label>
+                        <input type="text" name="graphics" onChange={handleGraphicsChange} defaultValue={update.graphics || ''} placeholder="Update Graphics"   className="input input-bordered w-full " />
+                    </div>
+
+                    {/* 11. keyboard */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Keyboard</span>
+                        </label>
+                        <input type="text" name="keyboard" onChange={handleKeyboardChange} defaultValue={update.keyboard || ''} placeholder="Update Keyboard"   className="input input-bordered w-full " />
+                    </div>
+
+                    {/* 12. camera */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Camera</span>
+                        </label>
+                        <input type="text" name="camera" onChange={handleCameraChange} defaultValue={update.camera || ''} placeholder="Update Camera"   className="input input-bordered w-full " />
+                    </div>
+
+                    {/* 13. speaker */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Speaker</span>
+                        </label>
+                        <input type="text" name="speaker" onChange={handleSpeakerChange} defaultValue={update.speaker || ''} placeholder="Update Speaker"   className="input input-bordered w-full " />
+                    </div>
+
+                    {/* 14. audio */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Audio</span>
+                        </label>
+                        <input type="text" name="audio" onChange={handleAudioChange} defaultValue={update.audio || ''} placeholder="Update Audio"   className="input input-bordered w-full " />
+                    </div>
+
+                    {/* 15. network */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Network</span>
+                        </label>
+                        <input type="text" name="network" onChange={handleNetworkChange} defaultValue={update.network || ''} placeholder="Update Network"   className="input input-bordered w-full " />
+                    </div>
+
+                    {/* 15. os */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Os</span>
+                        </label>
+                        <input type="text" name="os" onChange={handleOsChange} defaultValue={update.os || ''} placeholder="Update Os"   className="input input-bordered w-full " />
+                    </div>
+
+                    {/* 16. weight */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Weight</span>
+                        </label>
+                        <input type="text" name="weight" onChange={handleWeightChange} defaultValue={update.weight || ''} placeholder="Update Weight"   className="input input-bordered w-full " />
+                    </div>
+
+                    {/* 17. warranty */}
+                    <div className="form-control w-full mb-2">
+                        <label className="label">
+                            <span className="label-text font-semibold">Warranty</span>
+                        </label>
+                        <input type="text" name="warranty" onChange={handleWarrantyChange} defaultValue={update.warranty || ''} placeholder="Update Warranty"   className="input input-bordered w-full " />
+                    </div>
 
                 </div>
+                {/* 18. Description */}
+                <div className="form-control w-full mb-2">
+                    <label className="label">
+                        <span className="label-text font-semibold">Description</span>
+                    </label>
+                    <textarea type="text" name="description" onChange={handleDescriptionChange} defaultValue={update.description || ''} placeholder="Update Description"   className="textarea textarea-bordered h-24 w-full " />
+                </div>
+                {/* submit button */}
+                <button style={{backgroundColor: '#212E52'}}  className="btn  px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md"  type="submit"> <RxUpdate></RxUpdate> Update</button>
             </form>
         </div>
     );
