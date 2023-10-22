@@ -50,28 +50,32 @@ const useFirebase = () => {
                 const email = error.customData.email;
                 const credential = GoogleAuthProvider.credentialFromError(error);
             });
-    } 
+    }
 
-    // observer if user signin or not
-    useEffect(()=>{
-        const unsubscribe = onAuthStateChanged(auth, (currentUser)=>{
-                setUser(currentUser);
-                if(currentUser){
-                    axios.post('http://localhost:5000/jwt', {email: currentUser.email})
-                    .then(data =>{
-                        localStorage.setItem('access-token', data.data.token)
-                        setLoading(false);
-                    })
-
-                } else{
-                    setUser({})
-                    localStorage.removeItem('access-token');
-                }
-        });
-        return () => {
-            unsubscribe();
-        }
-    }, [auth]) 
+    // observer if login or not
+    useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, currentUser => {
+      setUser(currentUser)
+      // console.log('currentUser',currentUser);
+      if (currentUser) {
+        axios.post('http://localhost:5000/jwt', { email: currentUser.email })
+          .then(data => {
+            // console.log(data.data.token);
+            localStorage.setItem('access-token', data.data.token)
+          }).catch(error => {
+            console.log({error: error.message});
+          })
+          setLoading(false)
+      }
+      else {
+        localStorage.removeItem('access-token')
+        setLoading(false)
+      }
+    })
+    return () => {
+      return unsubscribe()
+    }
+  }, [])
 
     // logout user 
     const logoutUser = () => {

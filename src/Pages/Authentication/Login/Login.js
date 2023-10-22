@@ -36,6 +36,17 @@ const Login = () => {
                 setError('');
                 navigate(from, {replace: true})
             })
+            .then(()=>{
+                Swal.fire({
+                        title: 'User Login Successful!',
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    })
+        })
             .catch((error) => {
                setError(error.message);
         });
@@ -44,10 +55,12 @@ const Login = () => {
     // user login 
     const handleUserLogin = event =>{
         event.preventDefault();  
-        handleLogin(email, password);
+        handleLogin(email, password)
+        
+        
     }
 
-     // reset password
+    // reset password
     const resetPassword = async () => {
         if (email) {
             await sendPasswordResetEmail(auth, email)

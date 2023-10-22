@@ -33,6 +33,7 @@ const Header = () => {
                 )
             }
         }) 
+        refetch()
     }
 
     return (
