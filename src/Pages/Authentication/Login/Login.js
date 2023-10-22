@@ -32,7 +32,7 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user);
                 setError('');
                 navigate(from, {replace: true})
             })
@@ -56,8 +56,6 @@ const Login = () => {
     const handleUserLogin = event =>{
         event.preventDefault();  
         handleLogin(email, password)
-        
-        
     }
 
     // reset password
