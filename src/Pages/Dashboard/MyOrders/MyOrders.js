@@ -9,7 +9,7 @@ import useAuth from '../../Authentication/useAuth/useAuth';
 const MyOrders = () => {
     const [cart, refetch] = useCart();
     const total = cart.reduce((sum, item)=> item.price + sum, 0 )
-     const {user} = useAuth();
+    const {user} = useAuth();
 
     const handleDelete = (item) => {
         Swal.fire({

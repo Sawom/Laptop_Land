@@ -292,20 +292,20 @@ const UpdateProduct = () => {
 
     return (
         <div  className='container mx-auto'>
-            <section className='text-center mb-10 ' > 
-                <p className='text-xl' > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold' > Update  ITEM </span> </p>
-                <br />
-                <p>Update Laptop model for : <span className='font-bold'>{update.model}</span>   </p>
+            <section className='text-center mb-10 mt-5' > 
+                <p > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold' > Update  ITEM </span> </p>
             </section>
+            <p className='text-center'>Update Laptop model for : <span className='font-bold'>{update.model}</span> </p>
+            <br />
             {/* form */}
             <form className='px-5' onSubmit={handleUpdate} >
-                <div className='grid lg:grid-cols-2 md:grid-cols-2 gap-3'>
+                <div className='grid lg:grid-cols-2 md:grid-cols-2 gap-3' >
                     {/* 1. code */}
                     <div className="form-control w-full mb-2">
                         <label className="label">
                             <span className="label-text font-semibold">Code</span>
                         </label>
-                        <input type="text" name="code" onChange={handleCodeChange} defaultValue={update.code || ''} placeholder="Update Code"   className="input input-bordered w-full " />
+                        <input type="number" name="code" onChange={handleCodeChange} defaultValue={update.code || ''} placeholder="Update Code"   className="input input-bordered w-full " />
                     </div>
 
                     {/* 2. model */}
