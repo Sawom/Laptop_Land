@@ -79,7 +79,7 @@ const ManageUsers = () => {
     } 
 
     return (
-        <div className='container px-1'>
+        <div className='container mx-auto px-1'>
             <h3 className='text-2xl font-semibold '> Total users: {users.length} </h3>
              {/* table */}
            <div className="overflow-x-auto">

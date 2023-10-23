@@ -28,7 +28,6 @@ const DashboardPage = () => {
                                 <li className='font-bold'> <Link to='/dashboard/adminhome'> <span className='text-white flex gap-1' > <FaHome></FaHome> Admin Home </span> </Link> </li>
                                 <li className='font-bold'> <Link to='/dashboard/addproduct'> <span className='text-white flex gap-1' >  Add Product </span> </Link> </li>
                                 <li className='font-bold'> <Link to='/dashboard/manageproduct'> <span className='text-white flex gap-1' >  Manage Product </span> </Link> </li>
-                                <li className='font-bold'> <Link to='/dashboard/manageorder'> <span className='text-white flex gap-1' >  Manage Orders </span> </Link> </li>
                                 <li className='font-bold'> <Link to='/dashboard/manageuser'> <span className='text-white flex gap-1' > <FaUsers></FaUsers> Manage User </span> </Link> </li>
                             </>
                             :

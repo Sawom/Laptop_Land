@@ -7,6 +7,7 @@ import TermsPages from './Pages/TermsPages/TermsPages';
 import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
 import Laptops from './Pages/LaptopPage/Laptops/Laptops';
+// tanstack query
 import {
   QueryClient,
   QueryClientProvider,
@@ -23,7 +24,6 @@ import AdminHome from './Pages/Dashboard/AdminHome/AdminHome';
 import AddProducts from './Pages/Dashboard/AddProducts/AddProducts';
 import AddReviews from './Pages/Dashboard/AddReviews/AddReviews';
 import ManageAllProducts from './Pages/Dashboard/ManageAllProducts/ManageAllProducts';
-import ManageOrders from './Pages/Dashboard/ManageOrders/ManageOrders';
 import ManageUsers from './Pages/Dashboard/ManageUsers/ManageUsers';
 import Payment from './Pages/Dashboard/Payment/Payment';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
@@ -85,8 +85,12 @@ function App() {
                     </AdminRoute>
                   } ></Route>
 
-                  <Route path='manageorder' element={ <ManageOrders></ManageOrders> } ></Route>
-                  <Route path='manageuser' element={ <ManageUsers></ManageUsers> } ></Route>
+                  {/* admin route: manage user */}
+                  <Route path='manageuser' element={ 
+                    <AdminRoute>
+                      <ManageUsers></ManageUsers>
+                    </AdminRoute>
+                   } ></Route>
                   
                 </Route>
                 {/* end dashboard page route */}
