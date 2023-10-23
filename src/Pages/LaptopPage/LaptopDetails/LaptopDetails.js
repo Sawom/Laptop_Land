@@ -22,7 +22,7 @@ const LaptopDetails = () => {
     return (
         <div className='container mx-auto mt-5'>
             {/* 1 */}
-            <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 w-full shadow-2xl p-2">
+            <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 w-full shadow-2xl p-2 gap-4">
             <figure><img className='w-50 ' src={details.img} alt="laptops" /></figure>
             <div className=" text-left mt-10">
                 <h2 className="card-title font-bold" style={{color: '#212E52'}} > Model: {details.model} </h2>
