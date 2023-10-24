@@ -78,6 +78,7 @@ const Header = () => {
                                 <li> <Link to='/about' >About</Link> </li>
                                 <li> <Link to='/faq' >FAQS</Link> </li>
                                 <li> <Link to='/terms' >Terms & Condition</Link> </li>
+                                <li> <Link to='/creview' >Customer Review</Link> </li>
                             </ul>
                             </details>
                         </li>
@@ -112,6 +113,7 @@ const Header = () => {
                                     <li> <Link to='/about' > About </Link> </li>
                                     <li> <Link to='/faq' >FAQS</Link> </li>
                                     <li> <Link to='/terms' >Terms & Condition</Link> </li>
+                                    <li> <Link to='/creview' >Customer Review</Link> </li>
                                 </ul>
                                 </details>
                         </li>

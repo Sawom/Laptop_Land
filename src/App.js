@@ -29,6 +29,7 @@ import Payment from './Pages/Dashboard/Payment/Payment';
 import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import AdminRoute from './Pages/Dashboard/AdminRoute/AdminRoute';
 import UpdateProduct from './Pages/Dashboard/UpdateProduct/UpdateProduct';
+import CustomerReview from './Pages/CustomerReview/CustomerReview';
 const queryClient = new QueryClient();
 
 function App() {
@@ -45,8 +46,9 @@ function App() {
                 <Route path='/faq' element={ <FAQSPage></FAQSPage> } ></Route>
                 <Route path='/terms' element={ <TermsPages></TermsPages> } ></Route>
                 <Route path='/laptops' element={ <Laptops></Laptops> } ></Route>
+                <Route path='/creview' element={ <CustomerReview></CustomerReview> } ></Route>
                 <Route path='laptopinfo/:id' element={ <LaptopDetails></LaptopDetails> } ></Route>
-                
+
                 {/* private route: BookingPage */}
                 <Route path='booking/:id' element={ 
                   <PrivateRoute>
