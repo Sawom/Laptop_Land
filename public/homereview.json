@@ -1,8 +1,12 @@
 [
     {
-        "name": "Emily Smith",
-        "details": "I couldn't be happier with my purchase from Laptop Land! The staff was incredibly helpful, and I found the perfect laptop for my needs. Highly recommend!",
-        "rating": 4
+        "name": "",
+        "email": "",
+        "productcode": ,
+        "model": ,
+        "rating": "",
+        "productreview": "",
+        "servicereview": ""
     },
     {
         "name": "John Davis",
