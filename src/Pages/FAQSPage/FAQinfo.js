@@ -6,7 +6,7 @@ const FAQinfo = ({faqinfo}) => {
     return (
         <div className='container mx-auto my-5' >
             {/* 1 */}
-            <div className="collapse collapse-arrow shadow-2xl p-3 my-5">
+            <div className="collapse bg-base-100 collapse-arrow shadow-2xl p-3 my-5">
                 <input type="radio" name="my-accordion-2" checked="checked" /> 
                 <div className="collapse-title text-xl font-medium">
                     <p> 1. {qtn1} </p>
@@ -16,7 +16,7 @@ const FAQinfo = ({faqinfo}) => {
                 </div>
             </div>
             {/* 2 */}
-            <div className="collapse collapse-arrow shadow-2xl p-3 my-5">
+            <div className="collapse bg-base-100 collapse-arrow shadow-2xl p-3 my-5">
                 <input type="radio" name="my-accordion-2" /> 
                 <div className="collapse-title text-xl font-medium">
                     2. {qtn2}
@@ -26,7 +26,7 @@ const FAQinfo = ({faqinfo}) => {
                 </div>
             </div>
             {/* 3 */}
-            <div className="collapse collapse-arrow shadow-2xl p-3 my-5">
+            <div className="collapse bg-base-100 collapse-arrow shadow-2xl p-3 my-5">
                 <input type="radio" name="my-accordion-2" /> 
                 <div className="collapse-title text-xl font-medium">
                     3. {qtn3}
@@ -36,7 +36,7 @@ const FAQinfo = ({faqinfo}) => {
                 </div>
             </div>
             {/* 4 */}
-            <div className="collapse collapse-arrow shadow-2xl p-3 my-5">
+            <div className="collapse bg-base-100 collapse-arrow shadow-2xl p-3 my-5">
                 <input type="radio" name="my-accordion-2" /> 
                 <div className="collapse-title text-xl font-medium">
                     4. {qtn4}
@@ -46,7 +46,7 @@ const FAQinfo = ({faqinfo}) => {
                 </div>
             </div>
             {/* 5 */}
-            <div className="collapse collapse-arrow shadow-2xl p-3 my-5">
+            <div className="collapse bg-base-100 collapse-arrow shadow-2xl p-3 my-5">
                 <input type="radio" name="my-accordion-2" /> 
                 <div className="collapse-title text-xl font-medium">
                     5. {qtn5}
@@ -56,7 +56,7 @@ const FAQinfo = ({faqinfo}) => {
                 </div>
             </div>
             {/* 6 */}
-            <div className="collapse collapse-arrow shadow-2xl p-3 my-5">
+            <div className="collapse bg-base-100 collapse-arrow shadow-2xl p-3 my-5">
                 <input type="radio" name="my-accordion-2" /> 
                 <div className="collapse-title text-xl font-medium">
                     6. {qtn6}
@@ -66,7 +66,7 @@ const FAQinfo = ({faqinfo}) => {
                 </div>
             </div>
             {/* 7 */}
-            <div className="collapse collapse-arrow shadow-2xl p-3 my-5">
+            <div className="collapse bg-base-100 collapse-arrow shadow-2xl p-3 my-5">
                 <input type="radio" name="my-accordion-2" /> 
                 <div className="collapse-title text-xl font-medium">
                     7. {qtn7}
@@ -76,7 +76,7 @@ const FAQinfo = ({faqinfo}) => {
                 </div>
             </div>
             {/* 8 */}
-            <div className="collapse collapse-arrow shadow-2xl p-3 my-5">
+            <div className="collapse bg-base-100 collapse-arrow shadow-2xl p-3 my-5">
                 <input type="radio" name="my-accordion-2" /> 
                 <div className="collapse-title text-xl font-medium">
                     8. {qtn8}
@@ -86,7 +86,7 @@ const FAQinfo = ({faqinfo}) => {
                 </div>
             </div>
             {/* 9 */}
-            <div className="collapse collapse-arrow shadow-2xl p-3 my-5">
+            <div className="collapse bg-base-100 collapse-arrow shadow-2xl p-3 my-5">
                 <input type="radio" name="my-accordion-2" /> 
                 <div className="collapse-title text-xl font-medium">
                     9. {qtn9}

@@ -39,7 +39,7 @@ const AddReviews = () => {
                         showConfirmButton: false,
                         timer: 1500
                     })
-                // event.target.reset();
+                event.target.reset();
             }
         })
     }

@@ -3,7 +3,7 @@ import CardLaptop from '../CardLaptop/CardLaptop';
 import BookingPage from '../../BookingPage/BookingPage';
 
 const LoadLaptop = () => {
-    const [laptop, setLaptop] = useState([]); // data = laptop
+    const [laptop, setLaptop] = useState([]);
     
     useEffect( ()=>{
         fetch('http://localhost:5000/laptop')

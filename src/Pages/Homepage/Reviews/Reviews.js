@@ -42,7 +42,7 @@ const Reviews = () => {
                 key={quote._id} >
                     <div className="flex flex-col items-center mx-24 my-16" >
                         <Rating style={{ maxWidth: 150 }} value={quote.rating} readOnly  /> <br />
-                        <p> {quote.servicereview} </p> <br />
+                        <p className='text-left'> {quote.servicereview} </p> <br />
                         <p className='text-xl text-yellow-600' > {quote.name} </p>
                     </div>
             </SwiperSlide> )
