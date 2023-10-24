@@ -1,31 +1,84 @@
 [
     {
-        "name": "",
-        "email": "",
-        "productcode": ,
-        "model": ,
-        "rating": "",
-        "productreview": "",
-        "servicereview": ""
+        "name": "Emily_R",
+        "email": "emily_r@example.com",
+        "productcode": 1030,
+        "model": "Lenovo LOQ 15APH8",
+        "rating": 5,
+        "productreview": "I purchased the Lenovo LOQ 15APH8 from Laptop Land, and I couldn't be happier with my choice. This laptop offers an outstanding blend of performance and affordability. The AMD Ryzen processor runs like a dream, handling all my tasks with ease. The build quality is excellent, and the battery life is impressive. The display is sharp and vibrant, making it a joy to use for both work and entertainment.",
+        "servicereview": "Laptop Land's service was top-notch. The website was easy to navigate, and the purchasing process was smooth. They provided clear product descriptions and answered all my pre-sale queries promptly. The laptop arrived on time, well-packaged, and in perfect condition. I had a great experience shopping at Laptop Land."
     },
     {
-        "name": "John Davis",
-        "details": "Laptop Land is the real deal! I got a fantastic deal on a powerful gaming laptop. Great selection and great prices!",
-        "rating": 5
+        "name": "Jason_M",
+        "email": "jason_m@example.com",
+        "productcode": 1030,
+        "model": "Lenovo LOQ 15APH8",
+        "rating": 4,
+        "productreview": "The Lenovo LOQ 15APH8 is a fantastic budget-friendly laptop. The performance is decent, and it's very lightweight, making it great for on-the-go use. I found it perfect for basic tasks like web browsing, emails, and document editing. While it's not a gaming powerhouse, it's a reliable workhorse for everyday use.",
+        "servicereview": "Laptop Land's service was commendable. They have a wide range of laptops, making it easy to find the right one for your needs. The purchase and delivery process was straightforward, and their customer support was helpful. However, I wish they had more customization options for their laptops."
     },
     {
-        "name": "Sarah Johnson",
-        "details": "I had an amazing experience at Laptop Land. They went above and beyond to help me find the ideal laptop for my graphic design work. Thank you!",
-        "rating": 5
+        "name": " Sarah_K",
+        "email": "sarah_k@example.com",
+        "productcode": 129,
+        "model": "Lenovo IdeaPad Slim 3i",
+        "rating": 4,
+        "productreview": "The Lenovo IdeaPad Slim 3i is a sleek and stylish laptop. It's lightweight and slim, making it easy to carry around. The performance is good for everyday tasks, and the battery life is impressive. The keyboard is comfortable to type on, and the display is sharp. It's a solid choice for productivity and entertainment.",
+        "servicereview": "I had a pleasant experience shopping at Laptop Land. Their website is user-friendly, and they have a wide variety of laptops to choose from. My order arrived on time, and their customer service was responsive when I had questions. The only improvement I'd suggest is offering more detailed specifications on the website."
     },
     {
-        "name": "David Anderson",
-        "details": "Laptop Land is my go-to place for all things tech. The quality of their laptops and their customer service is second to none. Five stars!",
-        "rating": 5
+        "name": "David_W",
+        "email": "david_w@example.com",
+        "productcode": 129,
+        "model": "Lenovo IdeaPad Slim 3i",
+        "rating": 5,
+        "productreview": "The Lenovo IdeaPad Slim 3i is a true gem. It's a well-balanced laptop with excellent performance, a vibrant display, and long battery life. I use it for work, and it handles multitasking effortlessly. The build quality is top-notch, and it's incredibly thin and lightweight. I highly recommend it to anyone in need of a reliable laptop.",
+        "servicereview": "Laptop Land exceeded my expectations. Their website is intuitive, and I had no trouble finding the laptop I wanted. The purchasing process was smooth, and their customer support was quick to respond to my inquiries. My IdeaPad Slim 3i arrived in perfect condition and on time. Laptop Land's service is exceptional."
     },
     {
-        "name": "Michael Roberts",
-        "details": "Laptop Land exceeded my expectations. The staff's knowledge and their wide range of laptops made it easy for me to find the perfect one. I'll definitely be back!",
-        "rating": 5
+        "name": "Sarah Adison",
+        "email": "sarah123@email.com",
+        "productcode": 112,
+        "model": "Asus ExpertBook BR1100FKA",
+        "rating": 5,
+        "productreview": "I am extremely impressed with my Asus ExpertBook BR1100FKA! This laptop is an absolute workhorse. It's powerful, fast, and the battery life is exceptional. I use it for both work and personal tasks, and it handles everything with ease. The build quality is top-notch, and the keyboard is comfortable for long typing sessions. The display is sharp and clear, making it a pleasure to work and watch movies. The durability of this laptop is also a big plus, and it gives me confidence that it will last for years.",
+        "servicereview": "I had a fantastic experience shopping on 'Laptop Land.' The website was easy to navigate, and the product descriptions were detailed and accurate. The order process was smooth, and my laptop arrived in perfect condition and on time. I appreciate the excellent customer service and would highly recommend 'Laptop Land' to anyone looking for a quality laptop and a great shopping experience."
+    },
+    {
+        "name": "JohnDoe456",
+        "email": "johndoe456@email.com",
+        "productcode": 112,
+        "model": "Asus ExpertBook BR1100FKA",
+        "rating": 5,
+        "productreview": "The Asus ExpertBook BR1100FKA is a solid choice for a budget-friendly laptop. It offers good performance for everyday tasks and runs smoothly. The compact and lightweight design is convenient for on-the-go use, and the battery life is decent. I've had no issues with it so far, and it meets my basic computing needs.",
+        "servicereview": "Shopping at 'Laptop Land' was straightforward, and the pricing for this laptop was competitive. The customer service team was responsive and helpful, providing me with the information I needed. While I would have liked to see more options in this price range, I'm overall satisfied with my purchase and the service I received."
+    },
+    {
+        "name": "Rodoshi",
+        "email": "rodoshi143@gmail.com",
+        "productcode": 120,
+        "model": "HP 15s-eq2618AU",
+        "rating": 4,
+        "productreview": "The HP 15s-eq2618AU is a reliable laptop that gets the job done. It offers a decent balance of performance and affordability. The AMD Ryzen processor handles multitasking well, and the display is crisp and clear. The laptop's design is sleek and modern, and the keyboard is comfortable to type on. While it may not be a gaming powerhouse, it's perfect for everyday tasks and work.",
+        "servicereview": "I had a smooth experience shopping on 'Laptop Land.' The website was user-friendly, and I found detailed specifications for the HP 15s-eq2618AU. The laptop arrived on time and was well-packaged. 'Laptop Land' provides a hassle-free buying process, and I appreciate the transparency in product descriptions."
+    },
+    {
+        "name": "LilySmith22",
+        "email": "lilysmith22@email.com",
+        "productcode": 120,
+        "model": "HP 15s-eq2618AU",
+        "rating": 5,
+        "productreview": "I can't say enough good things about the HP 15s-eq2618AU! It's the best value for money. This laptop exceeded my expectations. The performance is impressive for the price, and it handles both work and entertainment effortlessly. The build quality is solid, and I love the slim and elegant design. The battery life is remarkable, and I don't have to worry about recharging it constantly.",
+        "servicereview": "'Laptop Land' is my go-to place for laptops. The website is well-organized, and I found the HP 15s-eq2618AU with ease. The purchase process was straightforward, and my laptop arrived promptly and in perfect condition. The customer service team is knowledgeable and responsive. I couldn't be happier with my purchase and the service provided by 'Laptop Land.' "
+    },
+    {
+        "name": "Tamanna",
+        "email": "tamanna@email.com",
+        "productcode": 134,
+        "model": "Apple MacBook Air",
+        "rating": 5,
+        "productreview": "I recently purchased the Apple MacBook Air from Laptop Land, and I couldn't be happier with my purchase. The laptop's sleek design, lightweight build, and impressive performance have made it an absolute delight to use. It's a perfect fit for both work and leisure. The Retina display is stunning, offering vivid colors and sharp clarity. The battery life is exceptional, easily lasting me through a full day of work. The MacBook Air's performance is snappy, handling multitasking and demanding applications with ease. Overall, a fantastic product!",
+        "servicereview": "Laptop Land's service was top-notch. They provided detailed product information, and the purchasing process was smooth and hassle-free. The laptop was delivered promptly, and it arrived in pristine condition. Their customer support was also excellent, addressing all my queries promptly and professionally. I highly recommend Laptop Land for both their products and their exceptional service."
     }
+    
 ]
