@@ -53,7 +53,7 @@ const AddProducts = () => {
             </section>
 
             {/* add product form */}
-            <form className='px-5' onSubmit={handleSubmit(onSubmit)} >
+            <form className='px-5 overflow-x-auto' onSubmit={handleSubmit(onSubmit)} >
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 gap-3' >
                     {/* 1. code */}
                     <div className="form-control w-full mb-6">
