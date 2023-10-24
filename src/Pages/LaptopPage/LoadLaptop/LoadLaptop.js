@@ -46,7 +46,7 @@ const LoadLaptop = () => {
             </div>
             <br />
            
-            <div className='grid lg:grid-cols-4 md:grid-cols-3 gap-5 my-10'>
+            <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-5 my-10'>
                 {
                     laptop.length > 0 ?
                     laptop.map((laptopdata)=> <CardLaptop
