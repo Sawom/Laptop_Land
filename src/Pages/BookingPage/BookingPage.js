@@ -47,14 +47,6 @@ const BookingPage = () => {
             <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 w-full shadow-2xl p-3 gap-4">
                 <div>
                     <figure><img className='w-50 ' src={booking.img} alt="laptops" /></figure>
-                    <p className='text-primary'>** Read instruction carefully before fillup booking form. Use only these given information otherwise booking will be cancelled</p>
-                    <br />
-                    <p> <span className='font-bold' > Your Name:</span> {user.displayName}</p>
-                    <p> <span className='font-bold' > Your Email:</span> {user.email} </p>
-                    <p> <span className='font-bold' > Product Code:</span> {booking.code} </p>
-                    <p> <span className='font-bold' > Laptop Model:</span> {booking.model} </p>
-                    <p> <span className='font-bold' > Price:</span> {booking.price} BDT </p>
-                    
                 </div>
                 
                 <div className=" text-left mt-10">
@@ -64,7 +56,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Name*</span>
                             </label>
-                            <input type="text" {...register("name", { required: true })} defaultValue={user.displayName}  placeholder="Your Name" name='name'  className="input input-bordered w-full " />
+                            <input type="text" {...register("name", { required: true })} readOnly defaultValue={user.displayName}  placeholder="Your Name" name='name'  className="input input-bordered w-full " />
                         </div>
 
                         {/* 2. email */}
@@ -72,7 +64,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Email*</span>
                             </label>
-                            <input type="email" {...register("email", { required: true })} defaultValue={user.email}  placeholder="Your Email"  name="email" className="input input-bordered w-full "  />
+                            <input type="email" {...register("email", { required: true })} readOnly defaultValue={user.email}  placeholder="Your Email"  name="email" className="input input-bordered w-full "  />
                         </div>
 
                         {/* 3. address */}
@@ -80,7 +72,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Address*</span>
                             </label>
-                            <input type="text" {...register("address", { required: true })} placeholder="Your Address" name="address" className="input input-bordered w-full "  />
+                            <input type="text" {...register("address", { required: true })} defaultValue={''}  placeholder="Your Address" name="address" className="input input-bordered w-full "  />
                         </div>
 
                         {/* 4. product code */}
@@ -88,7 +80,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Product Code*</span>
                             </label>
-                            <input type="number" {...register("code", { required: true })} placeholder="Product Code"  name="code"  className="input input-bordered w-full "  />
+                            <input type="number" {...register("code", { required: true })} readOnly defaultValue={booking.code}  placeholder="Product Code"  name="code"  className="input input-bordered w-full "  />
                         </div>
 
                         {/* 5. model */}
@@ -96,7 +88,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Laptop Model*</span>
                             </label>
-                            <input type="text" {...register("model", { required: true })} placeholder="Laptop Model"  name="model" className="input input-bordered w-full " />
+                            <input type="text" {...register("model", { required: true })} readOnly defaultValue={booking.model}  placeholder="Laptop Model"  name="model" className="input input-bordered w-full " />
                         </div>
 
                         {/* 6. price */}
@@ -104,14 +96,12 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Price (BDT)*</span>
                             </label>
-                            <input type="number" {...register("price", { required: true })} placeholder="Price"  name="price" className="input input-bordered w-full "  />
+                            <input type="number" {...register("price", { required: true })} readOnly defaultValue={booking.price} placeholder="Price"  name="price" className="input input-bordered w-full "  />
                         </div>
 
                         {/* submit button */}
                         <button style={{backgroundColor: '#212E52'}} className="btn px-5  text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> book Now </button>
                     </form>
-                    
-                    
                 </div>
             </div>
         </div>
