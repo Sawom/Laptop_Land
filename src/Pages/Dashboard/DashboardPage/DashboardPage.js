@@ -39,6 +39,7 @@ const DashboardPage = () => {
                                 <li className='font-bold'> <Link to='/dashboard/myorder'> <span className='text-white flex gap-1' > <FaShoppingCart></FaShoppingCart> My Cart 
                                 <div className="badge px-2 badge-neutral">+{cart?.length || 0 }</div>
                                 </span> </Link> </li>
+                                <li className='font-bold'> <Link to='/dashboard/mybooking'> <span className='text-white flex gap-1' >  My Booking </span> </Link> </li>
                                 <li className='font-bold'> <Link to='/dashboard/payment'> <span className='text-white flex gap-1' > <FaWallet></FaWallet> Payment </span> </Link> </li>
                             </>
                         }

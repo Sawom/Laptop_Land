@@ -19,12 +19,12 @@ const BookingPage = () => {
 
     // take input data from form
     const handleInputData = (event) =>{
-        const {name, value} = event.target;
-        setBookinglaptop({...bookingLaptop, [name]: value})
+        const field = event.target.name;
+        const value = event.target.value;
+        const newBooking = {...bookingLaptop};
+        newBooking[field] = value;
+        setBookinglaptop(newBooking);
     } 
-
-
-
 
     // add booking
     const handleBooking = (event) =>{
@@ -46,7 +46,7 @@ const BookingPage = () => {
                         showConfirmButton: false,
                         timer: 1500
                     })
-                // event.target.reset();    
+                event.target.reset();    
             }
         })
     }
@@ -59,7 +59,7 @@ const BookingPage = () => {
             <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 w-full shadow-2xl p-3 gap-4">
                 <div>
                     <figure><img className='w-50 ' src={booking.img} alt="laptops" /></figure>
-                    <p className='text-primary'>** Read instruction carefully before fillup booking form. Use only this given information otherwise booking will be cancelled</p>
+                    <p className='text-primary'>** Read instruction carefully before fillup booking form. Use only these given information otherwise booking will be cancelled</p>
                     <br />
                     <p> <span className='font-bold' > Your Name:</span> {user.displayName}</p>
                     <p> <span className='font-bold' > Your Email:</span> {user.email} </p>
@@ -84,7 +84,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Email*</span>
                             </label>
-                            <input type="email" onChange={handleInputData} placeholder="Your Email"  name="email" defaultValue={user.email} className="input input-bordered w-full " required />
+                            <input type="email" onChange={handleInputData} placeholder="Your Email"  name="email" className="input input-bordered w-full " required />
                         </div>
 
                         {/* 3. address */}
@@ -116,7 +116,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Price (BDT)*</span>
                             </label>
-                            <input type="text" onChange={handleInputData} placeholder="Price"  name="price" className="input input-bordered w-full " required />
+                            <input type="number" onChange={handleInputData} placeholder="Price"  name="price" className="input input-bordered w-full " required />
                         </div>
 
                         {/* submit button */}

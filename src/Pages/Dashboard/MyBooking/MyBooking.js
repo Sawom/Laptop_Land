@@ -1,15 +1,13 @@
 import React from 'react';
-import useCart from '../../../Hooks/useCart';
-import { FaTrashAlt } from "react-icons/fa";
-import {FaDollarSign} from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import Swal from 'sweetalert2';
+import useBooking from '../../../Hooks/useBooking';
 import useAuth from '../../Authentication/useAuth/useAuth';
+import Swal from 'sweetalert2';
+import { FaTrashAlt } from "react-icons/fa";
 
-const MyOrders = () => {
-    const [cart, refetch] = useCart();
-    const total = cart.reduce((sum, item)=> item.price + sum, 0 )
+const MyBooking = () => {
+    const [booking, refetch] = useBooking();
     const {user} = useAuth();
+    const total = booking.reduce((sum, item)=> item.price + sum, 0 )
 
     const handleDelete = (item) => {
         Swal.fire({
@@ -22,7 +20,7 @@ const MyOrders = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/carts/${item._id}`, {
+                fetch(`http://localhost:5000/booking/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -43,16 +41,12 @@ const MyOrders = () => {
 
     return (
         <div className='container mx-auto px-4'>
-            <h1 className='text-xl mx-5'> <span className='text-blue-600'> {user.displayName}</span> , here is your order. Please pay to confirm order.</h1>
+            <h1 className='text-xl mx-5'> <span className='text-blue-600'> {user.displayName}</span> , here is your booking products. Please wait for admin approval. **Maximum two hours.</h1>
             <br />
             <div className='font-semibold h-[80px] flex justify-evenly items-center'>
-                <h3 className='text-xl'> Total Items: {cart.length} & </h3>
-                <h3 className='text-xl mx-1'> Total price: {total} BDT </h3>
-                <Link to="/dashboard/payment">
-                    <button className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex'><FaDollarSign></FaDollarSign> Pay</span> </button>
-                </Link>
+                <h3 className='text-xl'> Total Booking products: <span className='text-blue-600' >{booking.length}</span>  & Total price: <span className='text-blue-600'>{total} BDT</span>  </h3>
             </div>
-            <br />
+
             {/* table */}
              <div className="overflow-x-auto ">
                 <table className="table ">
@@ -60,7 +54,6 @@ const MyOrders = () => {
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Laptop</th>
                             <th>Model Name</th>
                             <th>Price</th>
                             <th>Action</th>
@@ -68,16 +61,9 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                            cart.map((item, index) => <tr key={item._id} >
+                            booking.map((item, index) => <tr key={item._id} >
                                 <td>
                                     {index + 1}
-                                </td>
-                                <td>
-                                    <div className="avatar">
-                                        <div className="mask mask-squircle w-12 h-12">
-                                            <img src={item.img} alt="Avatar Tailwind CSS Component" />
-                                        </div>
-                                    </div>
                                 </td>
                                 <td>
                                     {item.model}
@@ -92,10 +78,9 @@ const MyOrders = () => {
                     </tbody>
                 </table>
             </div>
-            {/* table end */}
-            
+
         </div>
     );
 };
 
-export default MyOrders;
+export default MyBooking;
