@@ -23,19 +23,19 @@ const LaptopDetails = () => {
         <div className='container mx-auto mt-5'>
             {/* 1 */}
             <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 w-full shadow-2xl p-2 gap-4">
-            <figure><img className='w-50 ' src={details.img} alt="laptops" /></figure>
-            <div className=" text-left mt-10">
-                <h2 className="card-title font-bold" style={{color: '#212E52'}} > Model: {details.model} </h2>
-                <br />
-                <p> <span className='font-bold'>product Code:</span>  {details.code} </p>
-                <p> <span className='font-bold'>Brand:</span>  {details.brand} </p>
-                <p> <span className='font-bold'>Processor:</span>  {details.processor} </p>
-                <p> <span className='font-bold'>Ram:</span>  {details.ram} </p>
-                <p> <span className='font-bold'>Ram Type:</span> {details.ramtype} </p>
-                <p style={{color: '#212E52'}} className='font-bold'>Price: {details.price} BDT </p>
-                <button onClick={handleBook} style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">Book now</button>
+                <figure><img className='w-50 ' src={details.img} alt="laptops" /></figure>
+                <div className=" text-left mt-10">
+                    <h2 className="card-title font-bold" style={{color: '#212E52'}} > Model: {details.model} </h2>
+                    <br />
+                    <p> <span className='font-bold'>product Code:</span>  {details.code} </p>
+                    <p> <span className='font-bold'>Brand:</span>  {details.brand} </p>
+                    <p> <span className='font-bold'>Processor:</span>  {details.processor} </p>
+                    <p> <span className='font-bold'>Ram:</span>  {details.ram} </p>
+                    <p> <span className='font-bold'>Ram Type:</span> {details.ramtype} </p>
+                    <p style={{color: '#212E52'}} className='font-bold'>Price: {details.price} BDT </p>
+                    <button onClick={handleBook} style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">Book now</button>
+                </div>
             </div>
-        </div>
         {/* 2 */}
             <div className='mt-10'>
                 <h1 className='lg:text-4xl md:text-3xl text-xl font-bold' >More Information</h1> <br />
