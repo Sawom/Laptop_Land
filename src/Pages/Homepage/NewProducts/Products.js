@@ -28,7 +28,7 @@ const Products = () => {
                 }
             </div>
             {/* button responsive */}
-            <div className='text-center my-10'>
+            <div className='text-center my-5'>
                 <Link to='/laptops'>
                     <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">View All Collections</button>
                 </Link>

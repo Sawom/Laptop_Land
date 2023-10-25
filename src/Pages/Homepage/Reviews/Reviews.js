@@ -6,6 +6,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
+import { Link } from 'react-router-dom';
 
 
 const Reviews = () => {
@@ -48,6 +49,12 @@ const Reviews = () => {
             </SwiperSlide> )
         }
             </Swiper>
+        
+            <div className='text-center my-5'>
+                <Link to='/creview'>
+                    <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">View All reviews</button>
+                </Link>
+            </div>
         </div>
     );
 };
