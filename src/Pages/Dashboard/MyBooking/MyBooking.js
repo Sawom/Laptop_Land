@@ -41,11 +41,19 @@ const MyBooking = () => {
 
     return (
         <div className='container mx-auto px-4'>
-            <h1 className='text-xl mx-5'> <span className='text-blue-600'> {user.displayName}</span> , here is your booking products. Please wait for admin approval. **Maximum two hours.</h1>
-            <br />
-            <div className='font-semibold h-[80px] flex justify-evenly items-center'>
-                <h3 className='text-xl'> Total Booking products: <span className='text-blue-600' >{booking.length}</span>  & Total price: <span className='text-blue-600'>{total} BDT</span>  </h3>
+            {/* heading */}
+            <section className='text-center mb-10 mt-10' > 
+                <p > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold mt-10' > My Booking </span> </p>
+            </section>
+            
+            <div>
+                <h1 className=' mx-5'> <span className='text-blue-600'> {user.displayName}</span> , here is your booking products. Please wait for admin approval. **Maximum two hours.</h1>
+                <br />
+                <div className='font-semibold h-[80px] flex justify-evenly items-center'>
+                    <h3 className='text-xl'> Total Booking products: <span className='text-blue-600' >{booking.length}</span>  & Total price: <span className='text-blue-600'>{total} BDT</span>  </h3>
+                </div>
             </div>
+            
 
             {/* table */}
              <div className="overflow-x-auto ">

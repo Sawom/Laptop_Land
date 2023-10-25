@@ -27,7 +27,7 @@ const BookingPage = () => {
         axios.post('http://localhost:5000/booking',newData)
         .then(data =>{
             if(data.data.insertedId){
-                // reset();
+                reset();
                 Swal.fire({
                             position: 'top-end',
                             icon: 'success',
@@ -56,7 +56,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Name*</span>
                             </label>
-                            <input type="text" {...register("name", { required: true })} readOnly defaultValue={user.displayName}  placeholder="Your Name" name='name'  className="input input-bordered w-full " />
+                            <input type="text" {...register("name", { required: true })} readOnly defaultValue={user.displayName}  placeholder="Your Name" name='name'  className="input input-info input-bordered w-full " />
                         </div>
 
                         {/* 2. email */}
@@ -64,39 +64,39 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Email*</span>
                             </label>
-                            <input type="email" {...register("email", { required: true })} readOnly defaultValue={user.email}  placeholder="Your Email"  name="email" className="input input-bordered w-full "  />
+                            <input type="email" {...register("email", { required: true })} readOnly defaultValue={user.email}  placeholder="Your Email"  name="email" className="input  input-info input-bordered w-full "  />
                         </div>
 
-                        {/* 3. address */}
-                        <div className="form-control w-full mb-6">
-                            <label className="label">
-                                <span className="label-text font-semibold">Address*</span>
-                            </label>
-                            <input type="text" {...register("address", { required: true })} defaultValue={''}  placeholder="Your Address" name="address" className="input input-bordered w-full "  />
-                        </div>
-
-                        {/* 4. product code */}
+                        {/* 3. product code */}
                         <div className="form-control w-full mb-6">
                             <label className="label">
                                 <span className="label-text font-semibold">Product Code*</span>
                             </label>
-                            <input type="number" {...register("code", { required: true })} readOnly defaultValue={booking.code}  placeholder="Product Code"  name="code"  className="input input-bordered w-full "  />
+                            <input type="number" {...register("code", { required: true })} readOnly defaultValue={booking.code}  placeholder="Product Code"  name="code"  className="input  input-info input-bordered w-full "  />
                         </div>
 
-                        {/* 5. model */}
+                        {/* 4. model */}
                         <div className="form-control w-full mb-6">
                             <label className="label">
                                 <span className="label-text font-semibold">Laptop Model*</span>
                             </label>
-                            <input type="text" {...register("model", { required: true })} readOnly defaultValue={booking.model}  placeholder="Laptop Model"  name="model" className="input input-bordered w-full " />
+                            <input type="text" {...register("model", { required: true })} readOnly defaultValue={booking.model}  placeholder="Laptop Model"  name="model" className="input  input-info input-bordered w-full " />
                         </div>
 
-                        {/* 6. price */}
+                        {/* 5. price */}
                         <div className="form-control w-full mb-6">
                             <label className="label">
                                 <span className="label-text font-semibold">Price (BDT)*</span>
                             </label>
-                            <input type="number" {...register("price", { required: true })} readOnly defaultValue={booking.price} placeholder="Price"  name="price" className="input input-bordered w-full "  />
+                            <input type="number" {...register("price", { required: true })} readOnly defaultValue={booking.price} placeholder="Price"  name="price" className="input input-info input-bordered w-full "  />
+                        </div>
+
+                        {/* 6. address */}
+                        <div className="form-control w-full mb-6">
+                            <label className="label">
+                                <span className="label-text font-semibold">Address*</span>
+                            </label>
+                            <input type="text" {...register("address", { required: true })} defaultValue={''}  placeholder="Your Address" name="address" className="input  input-info input-bordered w-full "  />
                         </div>
 
                         {/* submit button */}
