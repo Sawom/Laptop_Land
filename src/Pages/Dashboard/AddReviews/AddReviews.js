@@ -4,44 +4,30 @@ import { useForm } from 'react-hook-form';
 import {AiFillFolderAdd} from 'react-icons/ai';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
+import axios from 'axios';
 
 const AddReviews = () => {
     const {user} = useAuth();
-
+    const { register, handleSubmit, reset } = useForm();
     const [review, setReview] = useState({});
 
-    // take input data from form
-    const handleInput = (event) =>{
-        const field = event.target.name;
-        const value = event.target.value;
-        const newReview = {...review};
-        newReview[field] = value;
-        setReview(newReview);
-    }
-
     // add review
-    const handleReview = (event)=>{
-        event.preventDefault();
-        fetch('http://localhost:5000/homereview', {
-            method : 'POST',
-            headers: {
-                'content-type' : 'application/json'
-            },
-            body: JSON.stringify(review)
-        })
-        .then(res =>res.json())
-        .then(data =>{
-            if(data.acknowledged){
+    const onSubmit = (data) =>{
+        const formData = new FormData();
+        const {name, email,productcode, model, rating, productreview, servicereview} = data;
+        axios.post('http://localhost:5000/homereview', data)
+        .then( data=>{
+            if(data.data.insertedId){
+                reset();
                 Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Thanks for review!',
-                        showConfirmButton: false,
-                        timer: 1500
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Thanks for your review',
+                            showConfirmButton: false,
+                            timer: 1500
                     })
-                event.target.reset();
             }
-        })
+        } )
     }
 
     return (
@@ -49,15 +35,15 @@ const AddReviews = () => {
             <section className='text-center mb-10 mt-5' > 
                 <p > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold mt-10' > give a review </span> </p>
             </section>
-            <p> Use your name : <span className='text-primary'>{user.displayName}</span>  and email: <span className='text-primary' >{user.email}</span> </p>
+
             {/* review form */}
-            <form className='px-5' onSubmit={handleReview}>
+            <form className='px-5' onSubmit={handleSubmit(onSubmit)} >
                     {/* 1. name */}
                     <div className="form-control w-full mb-6">
                         <label className="label">
                             <span className="label-text font-semibold">Name*</span>
                         </label>
-                        <input type="text" onChange={handleInput} placeholder="Your Name"  name="name" className="input input-bordered w-full " required />
+                        <input type="text" placeholder="Your Name" defaultValue={user.displayName} {...register("name", { required: true })} className="input input-info input-bordered w-full " required />
                     </div>
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 gap-3'>
                     {/* 2. email */}
@@ -65,7 +51,7 @@ const AddReviews = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Email*</span>
                         </label>
-                        <input type="email" onChange={handleInput} placeholder="Email"  name="email" className="input input-bordered w-full " required />
+                        <input type="email" placeholder="Email" defaultValue={user.email}  {...register("email", { required: true })} className="input input-info input-bordered w-full " required />
                     </div>
 
                     {/* 3. productcode */}
@@ -73,7 +59,7 @@ const AddReviews = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Product Code*</span>
                         </label>
-                        <input type="number" onChange={handleInput} name="productcode" placeholder="Product Code" className="input input-bordered w-full " required />
+                        <input type="number"  {...register("productcode", { required: true })} placeholder="Product Code" className="input input-info input-bordered w-full " required />
                     </div>
 
                     {/* 4. model */}
@@ -81,7 +67,7 @@ const AddReviews = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Product Model*</span>
                         </label>
-                        <input type="text" onChange={handleInput} placeholder="Product model" name="model"  className="input input-bordered w-full " required />
+                        <input type="text" placeholder="Product model" {...register("model", { required: true })} className="input input-info input-bordered w-full " required />
                     </div>
 
                     {/* 5. rating */}
@@ -89,7 +75,7 @@ const AddReviews = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Ratings*</span>
                         </label>
-                        <input type="number" onChange={handleInput} placeholder="put a number from 1-5" name="rating"  className="input input-bordered w-full " required />
+                        <input type="number" placeholder="put a number from 1-5" {...register("rating", { required: true })} className="input input-info input-bordered w-full " required />
                     </div>
 
                 </div>
@@ -99,7 +85,7 @@ const AddReviews = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Product Review*</span>
                         </label>
-                        <textarea type="text" onChange={handleInput} placeholder="Product Review" name="productreview"  className="textarea textarea-bordered h-24 w-full " required />
+                        <textarea type="text" placeholder="Product Review"  {...register("productreview", { required: true })} className="textarea textarea-info textarea-bordered h-24 w-full " required />
                     </div>
 
                 {/* 7. service review */}
@@ -107,7 +93,7 @@ const AddReviews = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Service Review*</span>
                         </label>
-                        <textarea type="text" onChange={handleInput} placeholder="Service Review" name="servicereview"  className="textarea textarea-bordered h-24 w-full " required />
+                        <textarea type="text" placeholder="Service Review" {...register("servicereview", { required: true })} className="textarea textarea-info textarea-bordered h-24 w-full " required />
                     </div>
 
                     {/* submit button */}

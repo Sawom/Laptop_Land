@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import useAuth from '../Authentication/useAuth/useAuth';
 import Swal from 'sweetalert2';
 import axios from 'axios';
@@ -96,11 +96,17 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Address*</span>
                             </label>
-                            <input type="text" {...register("address", { required: true })} defaultValue={''}  placeholder="Your Address" name="address" className="input  input-info input-bordered w-full "  />
+                            <input type="text" {...register("address", { required: true })} defaultValue={''}  placeholder="Your Address" name="address" className="input  input-info input-bordered w-full "  required />
                         </div>
 
-                        {/* submit button */}
-                        <button style={{backgroundColor: '#212E52'}} className="btn px-5  text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> book Now </button>
+                        {/* submit and view button */}
+                        <div >
+                            <button style={{backgroundColor: '#212E52'}} className="btn px-5  text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md mr-10"> book Now </button>
+                            <Link to='/dashboard/mybooking' >
+                                <button style={{backgroundColor: '#212E52'}} className="btn px-5  text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> view bookings </button>
+                            </Link>
+                        </div>
+                        
                     </form>
                 </div>
             </div>
