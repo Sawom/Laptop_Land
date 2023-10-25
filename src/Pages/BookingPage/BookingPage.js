@@ -8,7 +8,7 @@ const BookingPage = () => {
     const {id} = useParams();
     const [booking, setBooking] = useState({});
 
-    const [bookingLaptop, setBookinglaptop] = useState({});
+    const [bookingLaptop, setBookinglaptop] = useState({ });
 
     // data loading
     useEffect( ()=>{
@@ -19,12 +19,12 @@ const BookingPage = () => {
 
     // take input data from form
     const handleInputData = (event) =>{
-        const field = event.target.defaultValue;
-        const value = event.target.value;
-        const newBooking = {...bookingLaptop};
-        newBooking[field] = value;
-        setBookinglaptop(newBooking);
+        const {name, value} = event.target;
+        setBookinglaptop({...bookingLaptop, [name]: value})
     } 
+
+
+
 
     // add booking
     const handleBooking = (event) =>{
@@ -57,7 +57,18 @@ const BookingPage = () => {
                 <p > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold mt-10' > booking form </span> </p>
             </section>
             <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 w-full shadow-2xl p-3 gap-4">
-                <figure><img className='w-50 ' src={booking.img} alt="laptops" /></figure>
+                <div>
+                    <figure><img className='w-50 ' src={booking.img} alt="laptops" /></figure>
+                    <p className='text-primary'>** Read instruction carefully before fillup booking form. Use only this given information otherwise booking will be cancelled</p>
+                    <br />
+                    <p> <span className='font-bold' > Your Name:</span> {user.displayName}</p>
+                    <p> <span className='font-bold' > Your Email:</span> {user.email} </p>
+                    <p> <span className='font-bold' > Product Code:</span> {booking.code} </p>
+                    <p> <span className='font-bold' > Laptop Model:</span> {booking.model} </p>
+                    <p> <span className='font-bold' > Price:</span> {booking.price} BDT </p>
+                    
+                </div>
+                
                 <div className=" text-left mt-10">
                     <form className='px-2' onSubmit={handleBooking} >
                         {/* 1. name */}
@@ -65,7 +76,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Name*</span>
                             </label>
-                            <input type="text"  onChange={handleInputData} placeholder="Your Name" defaultValue={user.displayName}  name="name" className="input input-bordered w-full " required />
+                            <input type="text"  onChange={handleInputData} placeholder="Your Name" name='name'  className="input input-bordered w-full " required />
                         </div>
 
                         {/* 2. email */}
@@ -81,7 +92,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Address*</span>
                             </label>
-                            <input type="text" onChange={handleInputData} placeholder="Your Address" defaultValue={''}  name="name" className="input input-bordered w-full " required />
+                            <input type="text" onChange={handleInputData} placeholder="Your Address" name="address" className="input input-bordered w-full " required />
                         </div>
 
                         {/* 4. product code */}
@@ -89,7 +100,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Product Code*</span>
                             </label>
-                            <input type="number" onChange={handleInputData} placeholder="Product Code"  name="code" defaultValue={booking.code} className="input input-bordered w-full " required />
+                            <input type="number" onChange={handleInputData} placeholder="Product Code"  name="code"  className="input input-bordered w-full " required />
                         </div>
 
                         {/* 5. model */}
@@ -97,7 +108,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Laptop Model*</span>
                             </label>
-                            <input type="text" onChange={handleInputData} placeholder="Laptop Model"  name="name" defaultValue={booking.model} className="input input-bordered w-full " required />
+                            <input type="text" onChange={handleInputData} placeholder="Laptop Model"  name="model" className="input input-bordered w-full " required />
                         </div>
 
                         {/* 6. price */}
@@ -105,7 +116,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Price (BDT)*</span>
                             </label>
-                            <input type="text" onChange={handleInputData} placeholder="Price"  name="price" defaultValue={booking.price} className="input input-bordered w-full " required />
+                            <input type="text" onChange={handleInputData} placeholder="Price"  name="price" className="input input-bordered w-full " required />
                         </div>
 
                         {/* submit button */}
