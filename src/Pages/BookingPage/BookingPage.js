@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import useAuth from '../Authentication/useAuth/useAuth';
 import Swal from 'sweetalert2';
+import axios from 'axios';
+import { useForm } from 'react-hook-form';
 
 const BookingPage = () => {
     const {user} = useAuth();
     const {id} = useParams();
     const [booking, setBooking] = useState({});
-
-    const [bookingLaptop, setBookinglaptop] = useState({ });
+    const { register, handleSubmit, reset } = useForm();
 
     // data loading
     useEffect( ()=>{
@@ -17,36 +18,23 @@ const BookingPage = () => {
         .then(data => setBooking(data));
     } , [])
 
-    // take input data from form
-    const handleInputData = (event) =>{
-        const field = event.target.name;
-        const value = event.target.value;
-        const newBooking = {...bookingLaptop};
-        newBooking[field] = value;
-        setBookinglaptop(newBooking);
-    } 
-
     // add booking
-    const handleBooking = (event) =>{
-        event.preventDefault();
-        fetch('http://localhost:5000/booking', {
-            method : 'POST',
-            headers: {
-                'content-type' : 'application/json'
-            },
-            body: JSON.stringify(bookingLaptop)
-        })
-        .then(res =>res.json())
+    const onSubmit = (data) =>{
+        const formData = new FormData();
+        const {name, email, address, code, model, price} = data;
+        const newData = {name, email, address, code, model,price: parseFloat(price)}
+
+        axios.post('http://localhost:5000/booking',newData)
         .then(data =>{
-            if(data.acknowledged){
+            if(data.data.insertedId){
+                // reset();
                 Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Booking Confirm!',
-                        showConfirmButton: false,
-                        timer: 1500
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Added successfully!',
+                            showConfirmButton: false,
+                            timer: 1500
                     })
-                event.target.reset();    
             }
         })
     }
@@ -70,13 +58,13 @@ const BookingPage = () => {
                 </div>
                 
                 <div className=" text-left mt-10">
-                    <form className='px-2' onSubmit={handleBooking} >
+                    <form className='px-2' onSubmit={handleSubmit(onSubmit)} >
                         {/* 1. name */}
                         <div className="form-control w-full mb-6">
                             <label className="label">
                                 <span className="label-text font-semibold">Name*</span>
                             </label>
-                            <input type="text"  onChange={handleInputData} placeholder="Your Name" name='name'  className="input input-bordered w-full " required />
+                            <input type="text" {...register("name", { required: true })} defaultValue={user.displayName}  placeholder="Your Name" name='name'  className="input input-bordered w-full " />
                         </div>
 
                         {/* 2. email */}
@@ -84,7 +72,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Email*</span>
                             </label>
-                            <input type="email" onChange={handleInputData} placeholder="Your Email"  name="email" className="input input-bordered w-full " required />
+                            <input type="email" {...register("email", { required: true })} defaultValue={user.email}  placeholder="Your Email"  name="email" className="input input-bordered w-full "  />
                         </div>
 
                         {/* 3. address */}
@@ -92,7 +80,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Address*</span>
                             </label>
-                            <input type="text" onChange={handleInputData} placeholder="Your Address" name="address" className="input input-bordered w-full " required />
+                            <input type="text" {...register("address", { required: true })} placeholder="Your Address" name="address" className="input input-bordered w-full "  />
                         </div>
 
                         {/* 4. product code */}
@@ -100,7 +88,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Product Code*</span>
                             </label>
-                            <input type="number" onChange={handleInputData} placeholder="Product Code"  name="code"  className="input input-bordered w-full " required />
+                            <input type="number" {...register("code", { required: true })} placeholder="Product Code"  name="code"  className="input input-bordered w-full "  />
                         </div>
 
                         {/* 5. model */}
@@ -108,7 +96,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Laptop Model*</span>
                             </label>
-                            <input type="text" onChange={handleInputData} placeholder="Laptop Model"  name="model" className="input input-bordered w-full " required />
+                            <input type="text" {...register("model", { required: true })} placeholder="Laptop Model"  name="model" className="input input-bordered w-full " />
                         </div>
 
                         {/* 6. price */}
@@ -116,7 +104,7 @@ const BookingPage = () => {
                             <label className="label">
                                 <span className="label-text font-semibold">Price (BDT)*</span>
                             </label>
-                            <input type="number" onChange={handleInputData} placeholder="Price"  name="price" className="input input-bordered w-full " required />
+                            <input type="number" {...register("price", { required: true })} placeholder="Price"  name="price" className="input input-bordered w-full "  />
                         </div>
 
                         {/* submit button */}
