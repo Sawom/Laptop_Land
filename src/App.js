@@ -30,6 +30,7 @@ import MyOrders from './Pages/Dashboard/MyOrders/MyOrders';
 import AdminRoute from './Pages/Dashboard/AdminRoute/AdminRoute';
 import UpdateProduct from './Pages/Dashboard/UpdateProduct/UpdateProduct';
 import CustomerReview from './Pages/CustomerReview/CustomerReview';
+import ManageReview from './Pages/Dashboard/ManageReview/ManageReview';
 const queryClient = new QueryClient();
 
 function App() {
@@ -66,19 +67,28 @@ function App() {
                   <Route path='addreviews' element={ <AddReviews></AddReviews> } ></Route>
                   <Route path='myorder' element={ <MyOrders></MyOrders> } ></Route>
                   <Route path='payment' element={ <Payment></Payment> } ></Route>
+                  <Route path='manageproduct' element={ <ManageAllProducts></ManageAllProducts> } ></Route>
+                  
                   {/* admin route: admin_home */}
                   <Route path='adminhome' element={ 
                     <AdminRoute>
                         <AdminHome></AdminHome>
                     </AdminRoute>
                    } ></Route>
+
                   {/* admin route: add_product */}
                   <Route path='addproduct' element={
                     <AdminRoute>
                         <AddProducts></AddProducts> 
                     </AdminRoute>
                      } ></Route>
-                  <Route path='manageproduct' element={ <ManageAllProducts></ManageAllProducts> } ></Route>
+                     
+                  {/* admin route: manage all review */}
+                  <Route path='managereview' element={
+                    <AdminRoute>
+                      <ManageReview></ManageReview>
+                    </AdminRoute>
+                  } ></Route>
                   
                   {/* admin route: update product */}
                   <Route path='manageproduct/update/:id' element={
