@@ -32,7 +32,6 @@ import UpdateProduct from './Pages/Dashboard/UpdateProduct/UpdateProduct';
 import CustomerReview from './Pages/CustomerReview/CustomerReview';
 import ManageReview from './Pages/Dashboard/ManageReview/ManageReview';
 import MyBooking from './Pages/Dashboard/MyBooking/MyBooking';
-import ManageBooking from './Pages/Dashboard/ManageBooking/ManageBooking';
 const queryClient = new QueryClient();
 
 function App() {
@@ -84,14 +83,6 @@ function App() {
                       <ManageAllProducts></ManageAllProducts>
                     </AdminRoute>
                       } ></Route>
-
-                  {/* admin route: manage bookings */}
-                  <Route path='managebooking' element={ 
-                    <AdminRoute>
-                      <ManageBooking></ManageBooking>
-                    </AdminRoute>
-                   } ></Route>
-
 
                   {/* admin route: add_product */}
                   <Route path='addproduct' element={
