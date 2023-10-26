@@ -43,7 +43,7 @@ const AddReviews = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Name*</span>
                         </label>
-                        <input type="text" placeholder="Your Name" defaultValue={user.displayName} {...register("name", { required: true })} className="input input-info input-bordered w-full " required />
+                        <input type="text" placeholder="Your Name" readOnly defaultValue={user.displayName} {...register("name", { required: true })} className="input input-info input-bordered w-full " required />
                     </div>
                 <div className='grid lg:grid-cols-2 md:grid-cols-2 gap-3'>
                     {/* 2. email */}
@@ -51,7 +51,7 @@ const AddReviews = () => {
                         <label className="label">
                             <span className="label-text font-semibold">Email*</span>
                         </label>
-                        <input type="email" placeholder="Email" defaultValue={user.email}  {...register("email", { required: true })} className="input input-info input-bordered w-full " required />
+                        <input type="email" placeholder="Email" readOnly defaultValue={user.email}  {...register("email", { required: true })} className="input input-info input-bordered w-full " required />
                     </div>
 
                     {/* 3. productcode */}

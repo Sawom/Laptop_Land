@@ -8,6 +8,7 @@ const MyBooking = () => {
     const [booking, refetch] = useBooking();
     const {user} = useAuth();
     const total = booking.reduce((sum, item)=> item.price + sum, 0 )
+    let status = 'pending';
 
     const handleDelete = (item) => {
         Swal.fire({
@@ -64,19 +65,27 @@ const MyBooking = () => {
                             <th>#</th>
                             <th>Model Name</th>
                             <th>Price</th>
+                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                             booking.map((item, index) => <tr key={item._id} >
+                                {/* index */}
                                 <td>
                                     {index + 1}
                                 </td>
+                                {/* model */}
                                 <td>
                                     {item.model}
                                 </td>
+                                {/* price */}
                                 <td className="">{item.price} BDT</td>
+                                {/* status */}
+                                <td >
+                                    <p> {status || ''} </p>
+                                </td>
                                 <td>
                                     <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-red-600  text-white"><FaTrashAlt></FaTrashAlt></button>
                                 </td>
