@@ -41,7 +41,7 @@ const CardLaptop = ({laptopdata}) => {
                         title: 'Laptop added to cart',
                         showConfirmButton: false,
                         timer: 1500
-                        })  
+                    })  
                 }
 
 

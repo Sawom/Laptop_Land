@@ -1,13 +1,10 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
-
-
-import Swal from 'sweetalert2';
 import {FaDollarSign} from 'react-icons/fa';
-import useAuth from '../../Authentication/useAuth/useAuth';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
+import useAuth from '../../Authentication/useAuth/useAuth';
 
-const CheckoutForm = ({price, cart}) => {
+const CheckoutForm = ({price, refetch, cart}) => {
     const stripe = useStripe();
     const elements = useElements();
     const { user} = useAuth();
@@ -80,22 +77,22 @@ const CheckoutForm = ({price, cart}) => {
                 date: new Date(),
                 quantity: cart.length,
                 cartItems: cart.map(item => item._id),
-                menuItems: cart.map(item => item.menuItemId),
+                laptopItems: cart.map(item => item.laptopId),
                 status: 'service pending',
-                itemNames: cart.map(item => item.name)
+                laptopNames: cart.map(item => item.model)
             }
             axiosSecure.post('/payments', payment)
                 .then(res => {
                     if (res.data.insertedId) {
+                        refetch();
                     }
                 })
         }
     }
 
-
     return (
         <div>
-             <form className="w-2/3 m-8" onSubmit={handleSubmit}>
+             <form className="w-2/3 m-8 overflow-x-auto" onSubmit={handleSubmit}>
                 <CardElement 
                     options={{
                     style: {
@@ -112,11 +109,11 @@ const CheckoutForm = ({price, cart}) => {
                     },
                     }}
                 required > </CardElement>
-                <button className='btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ' type="submit" disabled={!stripe || !clientSecret || processing}>
+                <button className='btn px-5 mt-6 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ' type="submit" disabled={!stripe || !clientSecret || processing}>
                     <FaDollarSign></FaDollarSign> Pay
                 </button>
             </form> 
-            
+
             {/* show error */}
             {cardError && <p className='text-red-600 ml-8'> {cardError} </p> }
             {transactionId && <p className='text-green-500'> Transaction complete with transactionId: {transactionId} </p> }
