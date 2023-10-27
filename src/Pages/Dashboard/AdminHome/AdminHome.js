@@ -2,12 +2,13 @@ import React from 'react';
 import useAuth from '../../Authentication/useAuth/useAuth';
 import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
+import { Bar, BarChart, CartesianGrid, Cell, Legend, Tooltip, XAxis, YAxis } from 'recharts';
 
 const AdminHome = () => {
     const {user} = useAuth();
     const [axiosSecure] = useAxiosSecure();
 
-    // useAxiosSecure diye backend theke data load kore niye ashtechi
+    // data load
     const {data: stats = {} } = useQuery({
         queryKey : ['admin-stats'],
         queryFn: async() =>{
@@ -16,9 +17,8 @@ const AdminHome = () => {
         }
     })
 
-
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto p-5'>
             {/* heading */}
             <section className='text-center mb-10 mt-10' > 
                 <p > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold mt-10' > admin home </span> </p>
