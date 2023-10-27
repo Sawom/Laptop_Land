@@ -44,6 +44,7 @@ const DashboardPage = () => {
                                 <li className='font-bold'> <Link to='/dashboard/mybooking'> <span className='text-white flex gap-1' >  My Booking
                                 <div className="badge px-2 badge-neutral">+{booking?.length || 0 }</div> </span> </Link> </li>
                                 <li className='font-bold'> <Link to='/dashboard/payment'> <span className='text-white flex gap-1' > <FaWallet></FaWallet> Payment </span> </Link> </li>
+                                <li className='font-bold'> <Link to='/dashboard/phistory'> <span className='text-white flex gap-1' > <FaWallet></FaWallet> Payment History </span> </Link> </li>
                             </>
                         }
                         
