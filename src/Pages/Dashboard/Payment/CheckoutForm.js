@@ -91,9 +91,9 @@ const CheckoutForm = ({price, refetch, cart}) => {
     }
 
     return (
-        <div>
-             <form className="w-2/3 m-8 overflow-x-auto" onSubmit={handleSubmit}>
-                <CardElement 
+        <div >
+             <form className="m-5 overflow-x-auto w-full shadow-xl p-5" onSubmit={handleSubmit}>
+                <CardElement className='input input-bordered p-3' 
                     options={{
                     style: {
                         base: {

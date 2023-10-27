@@ -12,7 +12,12 @@ const Payment = () => {
     const price = parseFloat(total.toFixed(2))
 
     return (
-        <div  className='container'>
+        <div  className='container mx-auto'>
+            {/* heading */}
+            <section className='text-center mb-10 mt-10' > 
+                <p > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold mt-10' > PAYMENT here </span> </p>
+            </section>
+
             <Elements stripe={stripePromise} >
                 <CheckoutForm cart={cart} refetch={refetch} price={total} ></CheckoutForm>
             </Elements>
