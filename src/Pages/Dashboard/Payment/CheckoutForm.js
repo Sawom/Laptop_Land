@@ -78,7 +78,7 @@ const CheckoutForm = ({price, refetch, cart}) => {
                 quantity: cart.length,
                 cartItems: cart.map(item => item._id),
                 laptopItems: cart.map(item => item.laptopId),
-                status: 'service pending',
+                status: 'Product Delivered',
                 laptopNames: cart.map(item => item.model)
             }
             axiosSecure.post('/payments', payment)
