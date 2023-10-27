@@ -5,7 +5,7 @@ const TermInfo = ({termsinfo}) => {
 
     return (
         <div >
-            <div className='container p-5 my-5 shadow-2xl  mx-auto'>
+            <div className='container p-5 my-5 shadow-xl bg-base-100 mx-auto'>
                 <p className='font-bold lg:text-2xl md:text-2xl text-xl' >Acceptance of Terms</p>
                 <p> {acceptance} </p>
                 <br />
@@ -36,8 +36,8 @@ const TermInfo = ({termsinfo}) => {
                 <p className='font-bold lg:text-2xl md:text-2xl text-xl' >Governing Law</p>
                 <p> {law} </p>
             </div>
-            {/* wa */}
-            <div className='container p-5 my-5 shadow-2xl  mx-auto'>
+            {/* about warranty*/}
+            <div className='container p-5 my-5 shadow-xl bg-base-100 mx-auto'>
                 <p className='lg:text-2xl md:text-2xl text-xl' > <span className='font-bold'>Warranty Information</span>  <small> (read carefully) </small> </p>
                 <br />
                 <p className='font-bold lg:text-2xl md:text-2xl text-xl' >Manufacturer's Warranty</p>
