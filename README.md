@@ -19,4 +19,4 @@ This is a Laptop shop named 'Laptop Land'. Here you can find laptop from differe
 <br>
 I try to make every page in this project full responsive. These are all about the project. Thank you!
 <br> <br>
-Live Site: https://653cfa6a9c2d710cfc654eca--ubiquitous-llama-8cf89b.netlify.app
+Live Site: https://ubiquitous-llama-8cf89b.netlify.app
