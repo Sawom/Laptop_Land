@@ -84,8 +84,9 @@ const ManageUsers = () => {
             <section className='text-center mb-10 mt-10' > 
                 <p > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold mt-10' > Manage user </span> </p>
             </section>
-            <h3 className='text-2xl font-semibold '> Total users: {users.length} </h3>
-             {/* table */}
+            <h3 className='lg:text-3xl md:text-3xl text-xl font-bold ml-4 '> Total users: {users.length} </h3>
+            <br />
+            {/* table */}
            <div className="overflow-x-auto">
                 <table className="table ">
                     {/* head */}

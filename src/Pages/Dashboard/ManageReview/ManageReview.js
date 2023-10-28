@@ -50,7 +50,7 @@ const ManageReview = () => {
                 <p > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold mt-10' > Manage review </span> </p>
             </section>
 
-            <h3 className='text-2xl font-semibold '> Total Reviews: {homereview.length} </h3>
+            <h3 className='lg:text-3xl md:text-3xl text-xl font-bold ml-4'> Total Reviews: {homereview.length} </h3>
 
             {/* show reviews */}
             <div>
