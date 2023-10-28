@@ -9,6 +9,7 @@ import pic5 from '../../../images/slide/pic5.png';
 import pic6 from '../../../images/slide/pic6.png';
 import './Slides.css';
 import { Link } from 'react-router-dom';
+import {AiFillShopping} from 'react-icons/ai';
 
 const Slides = () => {
     return (
@@ -23,7 +24,7 @@ const Slides = () => {
                         Laptop Land: Your One-Stop Destination for Cutting-Edge Laptops!
                         </p> 
                         <Link to='/laptops'>
-                            <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> Order Now </button>
+                            <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex gap-1'> <AiFillShopping> </AiFillShopping> Shop Now </span>  </button>
                         </Link>
                     </div>
                     <div >
@@ -37,7 +38,7 @@ const Slides = () => {
                             Discover the Future of Computing at Laptop Land. Visit Us Today!
                         </p>
                         <Link to='/laptops'>
-                            <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> Order Now </button>
+                            <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex gap-1'> <AiFillShopping> </AiFillShopping> Shop Now </span> </button>
                         </Link>
                     </div>
                     <div >
@@ -51,7 +52,7 @@ const Slides = () => {
                             Upgrade Your Tech Game with Laptop Land - Quality Laptops at Unbeatable Prices!
                         </p>
                         <Link to='/laptops'>
-                            <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> Order Now </button>
+                            <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex gap-1'> <AiFillShopping> </AiFillShopping> Shop Now </span> </button>
                         </Link>
                     </div>
                     <div >
@@ -65,7 +66,7 @@ const Slides = () => {
                             Laptop Land - Your Trusted Source for Top Brands and Exceptional Service. Visit Us Today!
                         </p>
                         <Link to='/laptops'>
-                            <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> Order Now </button>
+                            <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex gap-1'> <AiFillShopping> </AiFillShopping> Shop Now </span> </button>
                         </Link>
                     </div>
                     <div >
@@ -79,7 +80,7 @@ const Slides = () => {
                             Experience the Laptop Land Difference - Quality, Value, and Expertise Combined!
                         </p>
                         <Link to='/laptops'>
-                            <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> Order Now </button>
+                            <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex gap-1'> <AiFillShopping> </AiFillShopping> Shop Now </span> </button>
                         </Link>
                     </div>
                     <div >
@@ -93,7 +94,7 @@ const Slides = () => {
                             Your Laptop Dreams Come True at Laptop Land - Visit Us Today!
                         </p>
                         <Link to='/laptops'>
-                            <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> Order Now </button>
+                            <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex gap-1'> <AiFillShopping> </AiFillShopping> Shop Now </span> </button>
                         </Link>
                     </div>
                     <div >

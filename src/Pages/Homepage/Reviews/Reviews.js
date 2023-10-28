@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
 import { Link } from 'react-router-dom';
-
+import {MdOutlineRateReview} from 'react-icons/md';
 
 const Reviews = () => {
     const [review, setReview] = useState([]);
@@ -52,7 +52,7 @@ const Reviews = () => {
         
             <div className='text-center my-5'>
                 <Link to='/creview'>
-                    <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">View All reviews</button>
+                    <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex gap-1'> <MdOutlineRateReview> </MdOutlineRateReview> View all reviews </span>  </button>
                 </Link>
             </div>
         </div>

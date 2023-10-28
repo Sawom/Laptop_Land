@@ -16,7 +16,7 @@ const About = () => {
     return (
         <div>
            <AboutBanner></AboutBanner> 
-           <div className='container p-5 my-5 bg-base-100 shadow-2xl  mx-auto'>
+           <div className='container p-5 my-5 bg-base-100 shadow-xl  mx-auto'>
                 {
                     about.map( (aboutinfo)=> <AboutInfo
                         key={aboutinfo._id} aboutinfo={aboutinfo}

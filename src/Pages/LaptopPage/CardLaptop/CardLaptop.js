@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../Authentication/useAuth/useAuth';
 import useCart from '../../../Hooks/useCart';
 import Swal from 'sweetalert2';
+import {CgDetailsMore} from 'react-icons/cg';
+import {FaCartPlus} from 'react-icons/fa';
 
 const CardLaptop = ({laptopdata}) => {
     const { _id, model, brand, img, price,  code } = laptopdata;
@@ -73,8 +75,8 @@ const CardLaptop = ({laptopdata}) => {
                     <h2 className="card-title font-bold" style={{color: '#212E52'}} > {model} </h2>
                     <p> Product code: {code} </p>
                     <p> Brand: {brand} </p>
-                    <button onClick={ ()=> handleAddToCart(laptopdata) } style={{backgroundColor: '#212E52'}} className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">add to cart</button>
-                    <button onClick={handleView}  style={{backgroundColor: '#212E52'}} className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">View details</button>
+                    <button onClick={ ()=> handleAddToCart(laptopdata) } style={{backgroundColor: '#212E52'}} className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex gap-1'> <FaCartPlus> </FaCartPlus> add to cart </span> </button>
+                    <button onClick={handleView}  style={{backgroundColor: '#212E52'}} className="btn px-5 mt-1 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex gap-1'> <CgDetailsMore> </CgDetailsMore> View details </span> </button>
                 </div>
             </div>
         </div>
