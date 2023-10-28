@@ -33,6 +33,7 @@ import CustomerReview from './Pages/CustomerReview/CustomerReview';
 import ManageReview from './Pages/Dashboard/ManageReview/ManageReview';
 import MyBooking from './Pages/Dashboard/MyBooking/MyBooking';
 import PaymentHistory from './Pages/Dashboard/PaymentHistory/PaymentHistory';
+import NotFound from './Pages/NotFound/NotFound';
 const queryClient = new QueryClient();
 
 function App() {
@@ -119,6 +120,7 @@ function App() {
 
                 <Route path='/register' element={ <Register></Register> } ></Route>
                 <Route path='/login' element={ <Login></Login> } ></Route>
+                <Route path='*' element={ <NotFound></NotFound> } ></Route>
               </Routes>
             <Footer></Footer>
           </BrowserRouter>
