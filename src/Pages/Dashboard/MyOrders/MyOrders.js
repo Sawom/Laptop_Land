@@ -50,7 +50,7 @@ const MyOrders = () => {
             </section>
             {/* cart gif */}
             <div className="hero  flex mb-5">
-                <div className="hero-content flex-col lg:flex-row">
+                <div className="hero-content flex-col lg:flex-row md:flex-row">
                     <img src={cartgif} alt='userdemo' className="max-w-xs rounded-lg " />
                     <div>
                         <h1 className='text-xl mx-5'> <span className='text-blue-600'> {user.displayName}</span> , here is your order. Please pay to confirm order.</h1>

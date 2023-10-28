@@ -21,7 +21,7 @@ const Payment = () => {
 
             {/* card gif */}
             <div className="hero  flex mb-5">
-                <div className="hero-content flex-col lg:flex-row">
+                <div className="hero-content flex-col lg:flex-row md:flex-row">
                     <img src={card} alt='userdemo' className="max-w-xs rounded-lg " />
                     {/* list */}
                     <div>

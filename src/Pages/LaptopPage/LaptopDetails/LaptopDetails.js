@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import {BiLaptop} from 'react-icons/bi';
 
 const LaptopDetails = () => {
     const {id} = useParams();
@@ -33,7 +34,8 @@ const LaptopDetails = () => {
                     <p> <span className='font-bold'>Ram:</span>  {details.ram} </p>
                     <p> <span className='font-bold'>Ram Type:</span> {details.ramtype} </p>
                     <p style={{color: '#212E52'}} className='font-bold'>Price: {details.price} BDT </p>
-                    <button onClick={handleBook} style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">Book now</button>
+                    <button onClick={handleBook} style={{backgroundColor: '#212E52'}} 
+                    className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span  className='flex gap-1'> <BiLaptop> </BiLaptop> Book now </span> </button>
                 </div>
             </div>
         {/* 2 */}

@@ -31,10 +31,10 @@ const DashboardPage = () => {
                             isAdmin ? <>
                                 {/* admin */} 
                                 <li className='font-bold'> <Link to='/dashboard/adminhome'> <span className='text-white flex gap-1' > <FaHome></FaHome> Admin Home </span> </Link> </li>
-                                <li className='font-bold'> <Link to='/dashboard/addproduct'> <span className='text-white flex gap-1' > <FaLaptopMedical> </FaLaptopMedical> Add Product </span> </Link> </li>
-                                <li className='font-bold'> <Link to='/dashboard/manageproduct'> <span className='text-white flex gap-1' > <BiLaptop> </BiLaptop> Manage Product </span> </Link> </li>
+                                <li className='font-bold'> <Link to='/dashboard/addproduct'> <span className='text-white flex gap-1' > <FaLaptopMedical> </FaLaptopMedical> Add Laptop </span> </Link> </li>
+                                <li className='font-bold'> <Link to='/dashboard/manageproduct'> <span className='text-white flex gap-1' > <BiLaptop> </BiLaptop> Manage Laptop </span> </Link> </li>
                                 <li className='font-bold'> <Link to='/dashboard/manageuser'> <span className='text-white flex gap-1' > <FaUsers></FaUsers> Manage User </span> </Link> </li>
-                                <li className='font-bold'> <Link to='/dashboard/managereview'> <span className='text-white flex gap-1' > <FaUsers></FaUsers> Manage Review </span> </Link> </li>
+                                <li className='font-bold'> <Link to='/dashboard/managereview'> <span className='text-white flex gap-1' > <MdOutlineRateReview> </MdOutlineRateReview> Manage Review </span> </Link> </li>
                             </>
                             :
                             <>

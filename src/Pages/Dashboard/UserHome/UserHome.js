@@ -23,8 +23,8 @@ const UserHome = () => {
             </section>
 
             {/* user hello */}
-            <div className="hero  flex mb-5">
-                <div className="hero-content flex-col lg:flex-row">
+            <div className="hero flex mb-5">
+                <div className="hero-content flex-col lg:flex-row md:flex-row">
                     <img src={userpic} alt='userdemo' className="max-w-sm rounded-lg " />
                     <div>
                     <h1 className="text-xl font-bold"> Welcome <span className='text-primary'> {user.displayName}! </span>  </h1>
@@ -33,7 +33,7 @@ const UserHome = () => {
             </div>
 
             {/* user stats */}
-            <div className=" grid md:grid-cols-3 grid-cols-1 shadow place-items-center mx-5 gap-5 mb-5">
+            <div className=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 shadow place-items-center gap-5 mb-5">
                 {/* order */}
                 <div className="stat place-items-center">
                     <div className="stat-title font-bold"> My Cart Product </div>

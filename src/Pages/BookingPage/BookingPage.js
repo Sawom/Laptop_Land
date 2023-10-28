@@ -4,6 +4,8 @@ import useAuth from '../Authentication/useAuth/useAuth';
 import Swal from 'sweetalert2';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
+import {BiLaptop} from 'react-icons/bi';
+import {CgDetailsMore} from 'react-icons/cg';
 
 const BookingPage = () => {
     const {user} = useAuth();
@@ -101,9 +103,9 @@ const BookingPage = () => {
 
                         {/* submit and view button */}
                         <div >
-                            <button style={{backgroundColor: '#212E52'}} className="btn px-5  text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md mr-10"> book Now </button>
+                            <button style={{backgroundColor: '#212E52'}} className="btn px-5  text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md mr-10"> <span className='flex gap-1' > <BiLaptop> </BiLaptop> book Now </span>  </button>
                             <Link to='/dashboard/mybooking' >
-                                <button style={{backgroundColor: '#212E52'}} className="btn px-5  text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> view bookings </button>
+                                <button style={{backgroundColor: '#212E52'}} className="btn px-5  text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex gap-1'> <CgDetailsMore> </CgDetailsMore> view bookings </span>  </button>
                             </Link>
                         </div>
                         
