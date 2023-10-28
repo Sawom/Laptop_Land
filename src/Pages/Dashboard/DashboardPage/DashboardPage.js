@@ -5,6 +5,9 @@ import useCart from '../../../Hooks/useCart';
 import useAdmin from '../../../Hooks/useAdmin';
 import { Link, Outlet } from 'react-router-dom';
 import useBooking from '../../../Hooks/useBooking';
+import {MdOutlineRateReview} from 'react-icons/md';
+import {BiLaptop} from 'react-icons/bi';
+import {FaLaptopMedical, FaLaptopHouse} from 'react-icons/fa';
 
 const DashboardPage = () => {
     const [cart] = useCart();
@@ -28,8 +31,8 @@ const DashboardPage = () => {
                             isAdmin ? <>
                                 {/* admin */} 
                                 <li className='font-bold'> <Link to='/dashboard/adminhome'> <span className='text-white flex gap-1' > <FaHome></FaHome> Admin Home </span> </Link> </li>
-                                <li className='font-bold'> <Link to='/dashboard/addproduct'> <span className='text-white flex gap-1' >  Add Product </span> </Link> </li>
-                                <li className='font-bold'> <Link to='/dashboard/manageproduct'> <span className='text-white flex gap-1' >  Manage Product </span> </Link> </li>
+                                <li className='font-bold'> <Link to='/dashboard/addproduct'> <span className='text-white flex gap-1' > <FaLaptopMedical> </FaLaptopMedical> Add Product </span> </Link> </li>
+                                <li className='font-bold'> <Link to='/dashboard/manageproduct'> <span className='text-white flex gap-1' > <BiLaptop> </BiLaptop> Manage Product </span> </Link> </li>
                                 <li className='font-bold'> <Link to='/dashboard/manageuser'> <span className='text-white flex gap-1' > <FaUsers></FaUsers> Manage User </span> </Link> </li>
                                 <li className='font-bold'> <Link to='/dashboard/managereview'> <span className='text-white flex gap-1' > <FaUsers></FaUsers> Manage Review </span> </Link> </li>
                             </>
@@ -37,11 +40,11 @@ const DashboardPage = () => {
                             <>
                                 {/* user */}
                                 <li className='font-bold'> <Link to='/dashboard/userhome'> <span className='text-white flex gap-1' > <FaHome></FaHome> User Home </span> </Link> </li>
-                                <li className='font-bold'> <Link to='/dashboard/addreviews'> <span className='text-white flex gap-1' >  Add Reviews </span> </Link> </li>
+                                <li className='font-bold'> <Link to='/dashboard/addreviews'> <span className='text-white flex gap-1' > <MdOutlineRateReview> </MdOutlineRateReview> Add Reviews </span> </Link> </li>
                                 <li className='font-bold'> <Link to='/dashboard/myorder'> <span className='text-white flex gap-1' > <FaShoppingCart></FaShoppingCart> My Cart 
                                 <div className="badge px-2 badge-neutral">+{cart?.length || 0 }</div>
                                 </span> </Link> </li>
-                                <li className='font-bold'> <Link to='/dashboard/mybooking'> <span className='text-white flex gap-1' >  My Booking
+                                <li className='font-bold'> <Link to='/dashboard/mybooking'> <span className='text-white flex gap-1' > <BiLaptop> </BiLaptop>  My Booking
                                 <div className="badge px-2 badge-neutral">+{booking?.length || 0 }</div> </span> </Link> </li>
                                 <li className='font-bold'> <Link to='/dashboard/payment'> <span className='text-white flex gap-1' > <FaWallet></FaWallet> Payment </span> </Link> </li>
                                 <li className='font-bold'> <Link to='/dashboard/phistory'> <span className='text-white flex gap-1' > <FaWallet></FaWallet> Payment History </span> </Link> </li>
@@ -51,7 +54,7 @@ const DashboardPage = () => {
                         {/* divider */}
                         <div className='divider' ></div>
                         <li className='font-bold'> <Link to='/'> <span className='text-white flex gap-1' > <FaHome></FaHome> Home </span> </Link> </li>
-                        <li className='font-bold'> <Link to='/laptops'> <span className='text-white flex gap-1' > Our Collections </span> </Link> </li>
+                        <li className='font-bold'> <Link to='/laptops'> <span className='text-white flex gap-1' > <FaLaptopHouse> </FaLaptopHouse> Our Collections </span> </Link> </li>
                     </ul>
                 
                 </div>
