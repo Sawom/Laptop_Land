@@ -1,6 +1,6 @@
 ## Laptop_Land
 This is a Laptop shop named 'Laptop Land'. Here you can find laptop from different brands. this is a MERN project and there are two parts of this project. <br>
-1. User part and 2. Admin part <br> <br>
+1. User part and 2. Admin part. <br> <br>
 
 ### User part
 1. User should have an user account for order laptop. Here user create account by his/her gmail or email address. <br>
