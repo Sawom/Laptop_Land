@@ -9,7 +9,7 @@ const PaymentHistory = () => {
 
 
     return (
-        <div className='container mx-auto p-4'>
+        <div className='container mx-auto px-4'>
             {/* heading */}
             <section className='text-center mb-10 mt-10' > 
                 <p > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold mt-10' > PAYMENT HISTORY </span> </p>

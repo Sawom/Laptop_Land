@@ -5,7 +5,6 @@ import useBooking from '../../../Hooks/useBooking';
 import usePaymentHistory from '../../../Hooks/usePaymentHistory';
 import userpic from '../../../images/gif/user.gif';
 
-
 const UserHome = () => {
     const {user} = useAuth();
     const [cart, refetch] = useCart();

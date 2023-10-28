@@ -2,8 +2,9 @@ import { createUserWithEmailAndPassword, getAuth, sendEmailVerification, updateP
 import React, { useState } from 'react';
 import useAuth from '../useAuth/useAuth';
 import { Link, useNavigate } from 'react-router-dom';
-import reg from '../../../images/others/reg.png';
+import reg from '../../../images/gif/reg.gif';
 import Swal from 'sweetalert2';
+import { FaCashRegister } from 'react-icons/fa';
 
 const Register = () => {
     const [name, setName] = useState('');
@@ -115,8 +116,8 @@ const Register = () => {
     }
 
     return (
-        <div className='' >
-            <div className="hero container  mx-auto bg-base-100 min-h-screen ">
+        <div >
+            <div className="hero container mt-5 mx-auto bg-base-100 min-h-screen ">
                 <div className="hero-content  shadow-2xl flex-col lg:flex-row-reverse">
                     {/* 1st div */}
                     <div className="text-center mt-10 lg:text-left">
@@ -159,7 +160,7 @@ const Register = () => {
                             <input type="password" onBlur={handleConfirmpass} name="password2" placeholder="retype password" className="input input-bordered" required />
                             </div>
                             <div className="form-control mt-6">
-                                <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md">Register</button>
+                                <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md"> <span className='flex gap-2' > <FaCashRegister></FaCashRegister>  Register </span> </button>
                             </div>
                             <p>Already registered? <Link to='/login'> <span className='font-bold text-primary' >Go to LogIn</span>  </Link> </p>
                             <br />

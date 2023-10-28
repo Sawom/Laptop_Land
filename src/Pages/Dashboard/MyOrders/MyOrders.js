@@ -5,6 +5,7 @@ import {FaDollarSign} from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import useAuth from '../../Authentication/useAuth/useAuth';
+import cartgif from '../../../images/gif/cart.gif';
 
 const MyOrders = () => {
     const [cart, refetch] = useCart();
@@ -47,7 +48,17 @@ const MyOrders = () => {
             <section className='text-center mb-10 mt-10' > 
                 <p > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold mt-10' > My Cart </span> </p>
             </section>
-            <h1 className='text-xl mx-5'> <span className='text-blue-600'> {user.displayName}</span> , here is your order. Please pay to confirm order.</h1>
+            {/* cart gif */}
+            <div className="hero  flex mb-5">
+                <div className="hero-content flex-col lg:flex-row">
+                    <img src={cartgif} alt='userdemo' className="max-w-xs rounded-lg " />
+                    <div>
+                        <h1 className='text-xl mx-5'> <span className='text-blue-600'> {user.displayName}</span> , here is your order. Please pay to confirm order.</h1>
+                    </div>
+                </div>
+            </div>
+
+            
             <br />
             <div className='font-semibold h-[80px] flex justify-evenly items-center'>
                 <h3 className='text-xl'> Total Items: {cart.length} & </h3>

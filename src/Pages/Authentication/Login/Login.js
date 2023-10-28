@@ -3,7 +3,9 @@ import useAuth from '../useAuth/useAuth';
 import { getAuth, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import login from '../../../images/others/login.png';
+import login from '../../../images/gif/login.gif';
+import { BiSolidLogIn } from 'react-icons/bi';
+import { FaGoogle } from 'react-icons/fa';
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -99,7 +101,7 @@ const Login = () => {
 
     return (
         <div>
-           <div className="hero container mx-auto bg-base-100 min-h-screen ">
+           <div className="hero container mt-5 mx-auto bg-base-100 min-h-screen ">
                 <div className="hero-content  shadow-2xl flex-col lg:flex-row">
                     {/* 1st div */}
                     <div className="text-center mt-10 lg:text-left">
@@ -124,14 +126,14 @@ const Login = () => {
                             <input  type="password" onBlur={handlePassword}  name="password" placeholder="password" className="input input-bordered" required />
                             </div>
                             <div className="form-control mt-6">
-                                <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">Login</button>
+                                <button style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex gap-2'> <BiSolidLogIn></BiSolidLogIn> Login </span> </button>
                             </div>
                             {/* error */}
                             <p className='text-red-600' > {error} </p>
                             <p>New here? <Link to='/register'> <span className='font-bold text-primary' >Create a New Account</span>  </Link> </p>
                             <p className='mx-auto' >Or Sign In </p>
                            {/* google login button */}
-                           <button onClick={handleGoogleSignIn} style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md ">Sign in With Google</button>
+                           <button onClick={handleGoogleSignIn} style={{backgroundColor: '#212E52'}} className="btn px-5 mt-5 text-white btn-outline btn-active btn-sm md:btn-md lg:btn-md "> <span className='flex gap-2'> <FaGoogle></FaGoogle> Sign in With Google </span> </button>
                            {/* reset password */}
                             <p >Forgot password? <button onClick={resetPassword} className='btn btn-link font-bold text-primary ' style={{textDecoration: 'none'}} > Reset Password </button>  </p>
                         </form>
