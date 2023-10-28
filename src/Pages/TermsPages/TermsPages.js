@@ -6,7 +6,7 @@ const TermsPages = () => {
     const [terms, setTerms] = useState([]);
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/terms')
+        fetch('https://laptoplanddb-production.up.railway.app/terms')
         .then(res=> res.json())
         .then((data) =>{
             setTerms(data)

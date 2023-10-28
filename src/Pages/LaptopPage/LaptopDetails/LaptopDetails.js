@@ -7,7 +7,7 @@ const LaptopDetails = () => {
     const[details, setDetails] = useState({}); 
     
     useEffect( ()=>{
-        fetch(`http://localhost:5000/laptop/${id}`)
+        fetch(`https://laptoplanddb-production.up.railway.app/laptop/${id}`)
         .then(data => data.json() )
         .then(data => setDetails(data) )
     }, [] )

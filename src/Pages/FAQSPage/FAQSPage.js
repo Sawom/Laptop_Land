@@ -6,7 +6,7 @@ const FAQSPage = () => {
     const [faq, setFaq] = useState([]);
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/faqs')
+        fetch('https://laptoplanddb-production.up.railway.app/faqs')
         .then(res=> res.json())
         .then((data) =>{
             setFaq(data)

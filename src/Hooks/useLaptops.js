@@ -5,7 +5,7 @@ const useLaptops = () => {
     const{ data: laptop = [], isLoading: loading, refetch} = useQuery({
         queryKey: ['laptop'],
         queryFn: async() =>{
-            const res = await fetch('http://localhost:5000/laptop');
+            const res = await fetch('https://laptoplanddb-production.up.railway.app/laptop');
             return res.json();
         }
     })

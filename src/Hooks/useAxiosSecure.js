@@ -10,7 +10,7 @@ const useAxiosSecure = () => {
 
     // ***********base url**************
     const axiosSecure = axios.create({
-        baseURL: 'http://localhost:5000', 
+        baseURL: 'https://laptoplanddb-production.up.railway.app', 
     });
 
     // interceptors

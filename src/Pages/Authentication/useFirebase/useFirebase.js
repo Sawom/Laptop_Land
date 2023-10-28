@@ -23,7 +23,7 @@ const useFirebase = () => {
                 const token = credential.accessToken;
                 const loggedInUser = result.user;
                 const saveUser = {name:loggedInUser.displayName, email: loggedInUser.email}
-                fetch('http://localhost:5000/users', {
+                fetch('https://laptoplanddb-production.up.railway.app/users', {
                     method: 'POST',
                     headers:{
                         'content-type': 'application/json'
@@ -58,7 +58,7 @@ const useFirebase = () => {
       setUser(currentUser)
       // console.log('currentUser',currentUser);
       if (currentUser) {
-        axios.post('http://localhost:5000/jwt', { email: currentUser.email })
+        axios.post('https://laptoplanddb-production.up.railway.app/jwt', { email: currentUser.email })
           .then(data => {
             // console.log(data.data.token);
             localStorage.setItem('access-token', data.data.token)

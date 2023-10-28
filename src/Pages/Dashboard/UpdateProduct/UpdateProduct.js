@@ -9,7 +9,7 @@ const UpdateProduct = () => {
 
     // single data load
     useEffect( ()=>{
-        fetch(`http://localhost:5000/laptop/${id}`)
+        fetch(`https://laptoplanddb-production.up.railway.app/laptop/${id}`)
         .then(res=> res.json())
         .then( (data)=>{
             setUpdate(data)
@@ -266,7 +266,7 @@ const UpdateProduct = () => {
     // update function
     const handleUpdate = (event) =>{
         event.preventDefault();
-        const url = `http://localhost:5000/laptop/${id}` ;
+        const url = `https://laptoplanddb-production.up.railway.app/laptop/${id}` ;
         fetch(url, {
             method: 'PUT',
             headers: {

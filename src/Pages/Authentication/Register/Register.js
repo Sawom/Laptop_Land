@@ -59,7 +59,7 @@ const Register = () => {
             const user = result.user;
             console.log(user);
             const saveUser = {name:name, email:email}
-            fetch('http://localhost:5000/users',{
+            fetch('https://laptoplanddb-production.up.railway.app/users',{
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'

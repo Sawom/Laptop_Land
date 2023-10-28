@@ -6,7 +6,7 @@ const CustomerReview = () => {
     const [allreview , setAllreview] = useState([]);
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/homereview')
+        fetch('https://laptoplanddb-production.up.railway.app/homereview')
         .then( res => res.json() )
         .then(data =>{
             setAllreview(data);
@@ -19,7 +19,7 @@ const CustomerReview = () => {
     }, [] )
 
     const getReview = async ()=>{
-        let result = await fetch('http://localhost:5000/homereview');
+        let result = await fetch('https://laptoplanddb-production.up.railway.app/homereview');
         result = await result.json();
         setAllreview(result);
     }
@@ -27,7 +27,7 @@ const CustomerReview = () => {
     const handleSearchReview = async (event) =>{
         let key = event.target.value;
         if(key){
-            let result = await fetch(`http://localhost:5000/search/${key}`);
+            let result = await fetch(`https://laptoplanddb-production.up.railway.app/search/${key}`);
             result = await result.json();
             if (result){
                 setAllreview(result);

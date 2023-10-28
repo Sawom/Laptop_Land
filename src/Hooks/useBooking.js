@@ -9,7 +9,7 @@ const useBooking = () => {
         queryKey: ['booking', user?.email],
         enabled: !loading,
         queryFn: async() =>{
-            const res = await fetch(`http://localhost:5000/booking?email=${user?.email}`)
+            const res = await fetch(`https://laptoplanddb-production.up.railway.app/booking?email=${user?.email}`)
             return res.json();
         }
     })

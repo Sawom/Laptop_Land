@@ -15,7 +15,7 @@ const BookingPage = () => {
 
     // data loading
     useEffect( ()=>{
-        fetch(`http://localhost:5000/laptop/${id}`)
+        fetch(`https://laptoplanddb-production.up.railway.app/laptop/${id}`)
         .then(data => data.json())
         .then(data => setBooking(data));
     } , [])
@@ -26,7 +26,7 @@ const BookingPage = () => {
         const {name, email, address, code, model, price} = data;
         const newData = {name, email, address, code, model,price: parseFloat(price)}
 
-        axios.post('http://localhost:5000/booking',newData)
+        axios.post('https://laptoplanddb-production.up.railway.app/booking',newData)
         .then(data =>{
             if(data.data.insertedId){
                 reset();

@@ -6,7 +6,7 @@ const LoadLaptop = () => {
     const [laptop, setLaptop] = useState([]);
     
     useEffect( ()=>{
-        fetch('http://localhost:5000/laptop')
+        fetch('https://laptoplanddb-production.up.railway.app/laptop')
         .then( res => res.json() )
         .then(data =>{
             setLaptop(data);
@@ -19,7 +19,7 @@ const LoadLaptop = () => {
     }, [] )
 
     const getLaptop = async () =>{
-        let result = await fetch('http://localhost:5000/laptop');
+        let result = await fetch('https://laptoplanddb-production.up.railway.app/laptop');
         result = await result.json();
         setLaptop(result);
     }
@@ -27,7 +27,7 @@ const LoadLaptop = () => {
     const handleSearch = async (event) =>{
         let key = event.target.value;
         if(key){
-            let result = await fetch(`http://localhost:5000/search/${key}`);
+            let result = await fetch(`https://laptoplanddb-production.up.railway.app/search/${key}`);
             result = await result.json();
             if (result){
                 setLaptop(result);

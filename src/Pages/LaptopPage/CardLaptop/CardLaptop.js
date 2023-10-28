@@ -26,7 +26,7 @@ const CardLaptop = ({laptopdata}) => {
         if(user && user.email){
             const cartItem = {laptopId: _id, code , model, img, price, email: user.email};
 
-            fetch('http://localhost:5000/carts', {
+            fetch('https://laptoplanddb-production.up.railway.app/carts', {
                 method: 'POST', 
                 headers:{
                      'content-type' : 'application/json'

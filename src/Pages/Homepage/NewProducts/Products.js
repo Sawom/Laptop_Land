@@ -8,7 +8,7 @@ const Products = () => {
     const [homedata, setHomedata] = useState([]);
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/homedata')
+        fetch('https://laptoplanddb-production.up.railway.app/homedata')
             .then(res => res.json())
             .then( data =>{
                 setHomedata(data);

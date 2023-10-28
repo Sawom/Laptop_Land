@@ -6,7 +6,7 @@ const About = () => {
     const [about, setAbout] = useState([]);
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/about')
+        fetch('https://laptoplanddb-production.up.railway.app/about')
         .then(res=> res.json())
         .then((data) =>{
             setAbout(data)

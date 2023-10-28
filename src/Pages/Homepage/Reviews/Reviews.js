@@ -13,7 +13,7 @@ const Reviews = () => {
     const [review, setReview] = useState([]);
 
     useEffect( ()=>{
-        fetch('http://localhost:5000/homereview')
+        fetch('https://laptoplanddb-production.up.railway.app/homereview')
             .then(res => res.json())
             .then( (data)=>{
                 setReview(data);

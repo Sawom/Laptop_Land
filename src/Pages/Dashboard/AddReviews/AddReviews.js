@@ -15,7 +15,7 @@ const AddReviews = () => {
     const onSubmit = (data) =>{
         const formData = new FormData();
         const {name, email,productcode, model, rating, productreview, servicereview} = data;
-        axios.post('http://localhost:5000/homereview', data)
+        axios.post('https://laptoplanddb-production.up.railway.app/homereview', data)
         .then( data=>{
             if(data.data.insertedId){
                 reset();
