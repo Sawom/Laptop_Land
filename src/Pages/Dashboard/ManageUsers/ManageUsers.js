@@ -80,6 +80,10 @@ const ManageUsers = () => {
 
     return (
         <div className='container mx-auto px-1'>
+            {/* heading */}
+            <section className='text-center mb-10 mt-10' > 
+                <p > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold mt-10' > Manage user </span> </p>
+            </section>
             <h3 className='text-2xl font-semibold '> Total users: {users.length} </h3>
              {/* table */}
            <div className="overflow-x-auto">

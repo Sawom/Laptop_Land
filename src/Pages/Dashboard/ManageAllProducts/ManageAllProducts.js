@@ -41,6 +41,7 @@ const ManageAllProducts = () => {
             <section className='text-center mb-10 mt-10' > 
                 <p > <span className=' py-4 border-y-4 uppercase lg:text-3xl md:text-2xl text-xl font-bold mt-10' > Manage Laptop </span> </p>
             </section>
+            
             <p className='lg:text-3xl md:text-3xl text-xl font-bold ml-4'> Total Product: {laptop.length} </p>
             {/* product are showing */}
             <div className="overflow-x-auto ">
