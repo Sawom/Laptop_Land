@@ -51,6 +51,7 @@ const CardLaptop = ({laptopdata}) => {
 
         }
         else{
+            
             Swal.fire({
                 title: 'Please login to add laptop in your cart',
                 icon: 'warning',
@@ -63,6 +64,7 @@ const CardLaptop = ({laptopdata}) => {
                   navigate('/login', {state: {from: location}})
                 }
               })
+            
         } 
     }
 
